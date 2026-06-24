@@ -44,7 +44,7 @@ describe('animalsService.listAnimals', () => {
     const result = listAnimals(tmpDir);
     expect(result).toHaveLength(1);
     expect(result[0]).toEqual({
-      id: 'gallina',
+      id: 'gallinaca',
       name: 'Gallina',
       scientificName: 'Gallus gallus domesticus',
     });
