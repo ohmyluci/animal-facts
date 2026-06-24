@@ -1,0 +1,49 @@
+{
+  "_comment": "Esquema de referencia para los ficheros data/animals/<especie>.json. Este fichero no se procesa por código, es documentación del formato.",
+  "id": "gallina",
+  "name": "Gallina",
+  "scientificName": "Gallus gallus domesticus",
+  "domains": [
+    {
+      "domain": "alimentaria",
+      "uses": [
+        {
+          "use": "Producción de huevos - jaula en batería",
+          "facts": [
+            {
+              "statement": "Espacio mínimo legal por gallina en la UE en jaulas en batería convencionales.",
+              "value": "550 cm² por gallina",
+              "source": {
+                "name": "Directiva 1999/74/CE del Consejo",
+                "url": "https://eur-lex.europa.eu/",
+                "accessedDate": "2026-06-24"
+              },
+              "scope": "UE",
+              "verified": false
+            }
+          ]
+        },
+        {
+          "use": "Producción de huevos - camperas",
+          "facts": []
+        },
+        {
+          "use": "Producción de carne (pollos de engorde)",
+          "facts": []
+        }
+      ]
+    },
+    {
+      "domain": "vestimenta",
+      "uses": []
+    },
+    {
+      "domain": "experimentacion",
+      "uses": []
+    },
+    {
+      "domain": "entretenimiento",
+      "uses": []
+    }
+  ]
+}
