@@ -1,0 +1,107 @@
+{
+  "id": "vaca",
+  "name": "Vaca",
+  "scientificName": "Bos taurus",
+  "domains": [
+    {
+      "domain": "alimentaria",
+      "uses": [
+        {
+          "use": "Producción de leche",
+          "facts": [
+            {
+              "statement": "El bienestar de los bovinos en explotaciones ganaderas de la UE se rige por la Directiva 98/58/CE, que establece obligaciones generales de cuidado (alimentación, espacio, supervisión) para todos los animales de granja.",
+              "value": null,
+              "source": {
+                "name": "Directiva 98/58/CE del Consejo, relativa a la protección de los animales en las explotaciones ganaderas",
+                "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:31998L0058",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "UE",
+              "verified": true
+            }
+          ]
+        },
+        {
+          "use": "Producción de carne bovina",
+          "facts": [
+            {
+              "statement": "La UE produjo aproximadamente 6,6 millones de toneladas de carne bovina en 2022, siendo uno de los principales productores mundiales.",
+              "value": "~6,6 millones de toneladas (2022)",
+              "source": {
+                "name": "Eurostat — Livestock and meat statistics",
+                "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Livestock_and_meat_statistics",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "UE",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "vestimenta",
+      "uses": [
+        {
+          "use": "Obtención de cuero bovino",
+          "facts": [
+            {
+              "statement": "Las pieles bovinas son la principal fuente de cuero a nivel mundial. Se destinan a calzado, marroquinería, tapicería e indumentaria.",
+              "value": null,
+              "source": {
+                "name": "FAO — World statistical compendium for raw hides and skins, leather and leather footwear 1999–2020",
+                "url": "https://www.fao.org/3/cb7452en/cb7452en.pdf",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "Global",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "experimentacion",
+      "uses": [
+        {
+          "use": "Suero bovino fetal (SBF) en investigación celular",
+          "facts": [
+            {
+              "statement": "El suero bovino fetal, extraído de fetos de vaca durante el sacrificio de la madre, es el suplemento de cultivo celular más utilizado en investigación biomédica a nivel mundial.",
+              "value": null,
+              "source": {
+                "name": "van der Valk et al. (2010) — Optimization of chemically defined cell culture media, Toxicology in Vitro 24(4):1053-63",
+                "url": "https://doi.org/10.1016/j.tiv.2010.03.016",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "Global",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "entretenimiento",
+      "uses": [
+        {
+          "use": "Tauromaquia",
+          "facts": [
+            {
+              "statement": "La tauromaquia está reconocida en España como patrimonio cultural de especial protección por ley, lo que la exime de la prohibición general de espectáculos que impliquen maltrato animal.",
+              "value": null,
+              "source": {
+                "name": "Ley 18/2013, de 12 de noviembre, para la regulación de la Tauromaquia como patrimonio cultural",
+                "url": "https://www.boe.es/eli/es/l/2013/11/12/18",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "España",
+              "verified": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
