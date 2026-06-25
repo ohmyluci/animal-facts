@@ -41,8 +41,6 @@ export default function App() {
             </AnimatePresence>
           </div>
 
-          <button className="truth-btn">Quiero ver la verdad</button>
-
           <div className="dots">
             {animals.map((_, i) => (
               <span key={i} className={`dot${i === index ? ' active' : ''}`} />
