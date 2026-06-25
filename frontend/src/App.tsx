@@ -45,6 +45,12 @@ export default function App() {
             </AnimatePresence>
           </div>
 
+          <div className="dots">
+            {animals.map((_, i) => (
+              <span key={i} className={`dot${i === index ? ' active' : ''}`} />
+            ))}
+          </div>
+
           <div className="mode-toggle">
             <button
               className={`mode-btn${mode === 'libertad' ? ' active' : ''}`}
@@ -58,12 +64,6 @@ export default function App() {
             >
               💀 Realidad
             </button>
-          </div>
-
-          <div className="dots">
-            {animals.map((_, i) => (
-              <span key={i} className={`dot${i === index ? ' active' : ''}`} />
-            ))}
           </div>
         </div>
       )}
