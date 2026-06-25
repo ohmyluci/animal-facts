@@ -1,27 +1,22 @@
 export interface Animal {
   id: string
   name: string
-  scientificName: string
-  lifeExpectancy?: {
-    wild?: { range?: string; value?: string }
+  emoji: string
+  domains: string[]
+  lifeExpectancy: {
+    value: string
+    source: Source
+    verified: boolean
   }
-  domains: Domain[]
-}
-
-export interface Domain {
-  domain: string
-  uses: Use[]
-}
-
-export interface Use {
-  use: string
-  lifeExpectancy?: { wild?: { value?: string; note?: string } }
-  slaughter?: {
-    typicalAgeAtKill?: { value?: string; context?: string }
-    methods?: SlaughterMethod[]
+  ageAtKill: {
+    value: string
+    context: string
+    source: Source
+    verified: boolean
   }
-  facts?: Fact[]
-  media?: Media[]
+  slaughterMethods: SlaughterMethod[]
+  facts: Fact[]
+  media: Media[]
 }
 
 export interface SlaughterMethod {
@@ -37,6 +32,7 @@ export interface Fact {
   statement: string
   value?: string | null
   source?: Source
+  scope?: string
   verified?: boolean
 }
 

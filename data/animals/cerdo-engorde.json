@@ -1,0 +1,53 @@
+{
+  "id": "cerdo-engorde",
+  "name": "Cerdo de engorde",
+  "emoji": "🐷",
+  "domains": ["alimentaria"],
+  "lifeExpectancy": {
+    "value": "10-15 años",
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Sus_scrofa",
+      "accessedDate": "2026-06-25"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "5-6 meses",
+    "context": "Sacrificado al alcanzar entre 100-120 kg de peso vivo.",
+    "source": {
+      "name": "Reglamento (CE) n.º 1099/2009",
+      "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+      "accessedDate": "2026-06-25"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento con CO₂ en cámara de gas",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
+      "scope": "UE",
+      "description": "Los cerdos son introducidos en grupos en una cámara donde se eleva el CO₂ hasta el 80-90%. La EFSA ha documentado que el CO₂ es aversivo y causa angustia antes de la pérdida de consciencia.",
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009, Anexo I",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+        "accessedDate": "2026-06-25"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Espacio mínimo legal por cerdo de más de 110 kg en la UE",
+      "value": "1 m² por animal",
+      "source": {
+        "name": "Directiva 2008/120/CE relativa a las normas mínimas para la protección de cerdos",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32008L0120",
+        "accessedDate": "2026-06-25"
+      },
+      "scope": "UE",
+      "verified": false
+    }
+  ],
+  "media": []
+}

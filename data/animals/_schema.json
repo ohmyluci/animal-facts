@@ -1,12 +1,34 @@
 {
-  "_comment": "Esquema de referencia para los ficheros data/animals/<especie>.json. Este fichero no se procesa por código, es documentación del formato.",
-  "id": "gallina",
-  "name": "Gallina",
-  "scientificName": "Gallus gallus domesticus",
+  "_comment": "Esquema de referencia para los ficheros data/animals/<id>.json. Un fichero = un animal/raza concreto. Este fichero no se procesa por código.",
+  "id": "pollo-engorde",
+  "name": "Pollo de engorde",
+  "emoji": "🐔",
+  "domains": ["alimentaria"],
   "lifeExpectancy": {
-    "wild": {
-      "range": "5-10 años",
-      "note": "Rango general de la especie. Ver cada use para la esperanza de vida por raza.",
+    "value": "5-10 años",
+    "source": {
+      "name": "",
+      "url": "",
+      "accessedDate": ""
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "35-42 días",
+    "context": "Sacrificado al alcanzar el peso de mercado (~2 kg)",
+    "source": {
+      "name": "",
+      "url": "",
+      "accessedDate": ""
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento eléctrico por baño de agua",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009",
+      "scope": "UE",
+      "description": "",
       "source": {
         "name": "",
         "url": "",
@@ -14,198 +36,27 @@
       },
       "verified": false
     }
-  },
-  "domains": [
+  ],
+  "facts": [
     {
-      "domain": "alimentaria",
-      "uses": [
-        {
-          "use": "Producción de huevos - jaula en batería",
-          "lifeExpectancy": {
-            "wild": {
-              "value": "",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            }
-          },
-          "slaughter": {
-            "typicalAgeAtKill": {
-              "value": "72 semanas",
-              "context": "Descarte de gallinas ponedoras al caer la producción",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            },
-            "methods": [
-              {
-                "method": "Aturdimiento eléctrico por baño de agua",
-                "legalBasis": "Reglamento (CE) 1099/2009",
-                "scope": "UE",
-                "description": "",
-                "source": {
-                  "name": "",
-                  "url": "",
-                  "accessedDate": ""
-                },
-                "verified": false
-              }
-            ]
-          },
-          "media": [
-            {
-              "type": "video",
-              "platform": "youtube",
-              "title": "",
-              "url": "",
-              "verified": false
-            }
-          ],
-          "facts": [
-            {
-              "statement": "Espacio mínimo legal por gallina en la UE en jaulas en batería convencionales.",
-              "value": "550 cm² por gallina",
-              "source": {
-                "name": "Directiva 1999/74/CE del Consejo",
-                "url": "https://eur-lex.europa.eu/",
-                "accessedDate": "2026-06-24"
-              },
-              "scope": "UE",
-              "verified": false
-            }
-          ]
-        },
-        {
-          "use": "Producción de huevos - camperas",
-          "lifeExpectancy": {
-            "wild": {
-              "value": "",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            }
-          },
-          "slaughter": {
-            "typicalAgeAtKill": {
-              "value": "",
-              "context": "",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            },
-            "methods": []
-          },
-          "media": [],
-          "facts": []
-        },
-        {
-          "use": "Producción de carne (pollos de engorde)",
-          "lifeExpectancy": {
-            "wild": {
-              "value": "",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            }
-          },
-          "slaughter": {
-            "typicalAgeAtKill": {
-              "value": "6 semanas",
-              "context": "Sacrificio estándar de pollos de engorde en la industria intensiva",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            },
-            "methods": []
-          },
-          "media": [],
-          "facts": []
-        },
-        {
-          "use": "Eliminación de pollitos machos recién nacidos",
-          "lifeExpectancy": {
-            "wild": {
-              "value": "",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            }
-          },
-          "slaughter": {
-            "typicalAgeAtKill": {
-              "value": "1 día",
-              "context": "Los machos no producen huevos y no son aptos para engorde en razas ponedoras",
-              "source": {
-                "name": "",
-                "url": "",
-                "accessedDate": ""
-              },
-              "verified": false
-            },
-            "methods": [
-              {
-                "method": "Trituración en vivo (maceración)",
-                "legalBasis": "Reglamento (CE) 1099/2009, Art. 1.3",
-                "scope": "UE",
-                "description": "",
-                "source": {
-                  "name": "",
-                  "url": "",
-                  "accessedDate": ""
-                },
-                "verified": false
-              },
-              {
-                "method": "Asfixia con CO₂",
-                "legalBasis": "Reglamento (CE) 1099/2009, Anexo I",
-                "scope": "UE",
-                "description": "",
-                "source": {
-                  "name": "",
-                  "url": "",
-                  "accessedDate": ""
-                },
-                "verified": false
-              }
-            ]
-          },
-          "media": [],
-          "facts": []
-        }
-      ]
-    },
+      "statement": "",
+      "value": "",
+      "source": {
+        "name": "",
+        "url": "",
+        "accessedDate": ""
+      },
+      "scope": "UE",
+      "verified": false
+    }
+  ],
+  "media": [
     {
-      "domain": "vestimenta",
-      "uses": []
-    },
-    {
-      "domain": "experimentacion",
-      "uses": []
-    },
-    {
-      "domain": "entretenimiento",
-      "uses": []
+      "type": "video",
+      "platform": "youtube",
+      "title": "",
+      "url": "",
+      "verified": false
     }
   ]
 }

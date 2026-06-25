@@ -1,0 +1,61 @@
+{
+  "id": "pollo-engorde",
+  "name": "Pollo de engorde",
+  "emoji": "🐔",
+  "domains": ["alimentaria"],
+  "lifeExpectancy": {
+    "value": "5-10 años",
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Gallus_gallus",
+      "accessedDate": "2026-06-25"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "33-47 días",
+    "context": "Sacrificado al alcanzar el peso de mercado de ~2 kg. La selección genética ha reducido este tiempo drásticamente en las últimas décadas.",
+    "source": {
+      "name": "Directiva 2007/43/CE del Consejo relativa a los pollos destinados a la producción de carne",
+      "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32007L0043",
+      "accessedDate": "2026-06-25"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento eléctrico por baño de agua",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
+      "scope": "UE",
+      "description": "Las aves son colgadas vivas por las patas en grilletes y su cabeza se sumerge en un baño de agua electrificado. Tras el aturdimiento se procede al degüello mecánico o manual.",
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009 del Consejo",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+        "accessedDate": "2026-06-25"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Densidad máxima de cría permitida en la UE",
+      "value": "33 kg de peso vivo por m²",
+      "source": {
+        "name": "Directiva 2007/43/CE del Consejo, Art. 3 y Anexo I",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32007L0043",
+        "accessedDate": "2026-06-25"
+      },
+      "scope": "UE",
+      "verified": false
+    }
+  ],
+  "media": [
+    {
+      "type": "video",
+      "platform": "youtube",
+      "title": "Dominion (2018)",
+      "url": "https://www.youtube.com/watch?v=LQRAfJyEsko",
+      "verified": false
+    }
+  ]
+}
