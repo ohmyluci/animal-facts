@@ -196,12 +196,12 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .mode-btn {
-  padding: 0.5rem 1.25rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 999px;
   border: none;
   background: transparent;
   color: #555;
-  font-size: 0.85rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.25s, color 0.25s;
   white-space: nowrap;
