@@ -3,6 +3,9 @@
 Una enciclopedia navegable por especie animal que documenta, con datos factuales y
 fuentes citadas, los distintos ámbitos en los que los animales son explotados por
 la industria humana: alimentaria, vestimenta, experimentación y entretenimiento.
+Es muy importante dar datos gubernamentales sobre la forma en que viven y la forma
+en que son sacrificados los animales, así como la esparanza de vida en un ambiente
+natural y la edad con la que son sacrificados.
 
 ## Objetivo del proyecto
 
@@ -10,8 +13,8 @@ la industria humana: alimentaria, vestimenta, experimentación y entretenimiento
   veganismo y para quienes necesitan datos citables en debates sobre bienestar animal.
 - Todo el contenido es **curado y revisado manualmente** antes de publicarse. No se
   genera contenido en tiempo real para el usuario final.
-- El registro editorial es **factual y documental**, evitando lenguaje gráfico o
-  sensacionalista — los datos por sí mismos son la base del argumento.
+- El registro editorial es **factual y documental**, mostrando la realidad tal y como
+  es.
 
 ## Estructura del proyecto
 
