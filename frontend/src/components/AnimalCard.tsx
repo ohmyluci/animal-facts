@@ -122,7 +122,7 @@ export default function AnimalCard({
           maxYears={animal.lifeExpectancy.maxYears}
           killYears={animal.ageAtKill.years}
         />
-        <SlaughterCounter annualKills={animal.annualKillsWorldwide} namePlural={animal.namePlural} gender={animal.gender} />
+        <SlaughterCounter annualKills={animal.annualKillsWorldwide} />
       </div>
     </motion.div>
   )
