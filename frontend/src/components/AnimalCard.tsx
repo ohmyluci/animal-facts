@@ -1,18 +1,33 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import type { Animal } from '../types'
+import type { Mode } from '../App'
 
 interface Props {
   animal: Animal
+  mode: Mode
   onSwipeLeft: () => void
   onSwipeRight: () => void
+  onDragX?: (x: number) => void
+  isBack?: boolean
+  dragProgress?: number
 }
 
-export default function AnimalCard({ animal, onSwipeLeft, onSwipeRight }: Props) {
+export default function AnimalCard({
+  animal, mode, onSwipeLeft, onSwipeRight, onDragX, isBack, dragProgress = 0,
+}: Props) {
   const x = useMotionValue(0)
   const rotate = useTransform(x, [-200, 200], [-12, 12])
   const opacity = useTransform(x, [-200, -100, 0, 100, 200], [0, 1, 1, 1, 0])
 
+  const backScale = 0.95 + dragProgress * 0.05
+  const backBrightness = 0.6 + dragProgress * 0.4
+
+  function handleDrag() {
+    onDragX?.(Math.abs(x.get()))
+  }
+
   function handleDragEnd(_: unknown, info: { offset: { x: number } }) {
+    onDragX?.(0)
     if (info.offset.x < -80) {
       animate(x, -400, { duration: 0.3 }).then(onSwipeLeft)
     } else if (info.offset.x > 80) {
@@ -22,18 +37,65 @@ export default function AnimalCard({ animal, onSwipeLeft, onSwipeRight }: Props)
     }
   }
 
+  const isRealidad = mode === 'realidad'
+
+  if (isBack) {
+    return (
+      <motion.div
+        className="card card--back"
+        style={{
+          scale: backScale,
+          filter: `brightness(${backBrightness})`,
+        }}
+      >
+        <div className="card-header">
+          <h2 className="card-name">{animal.name}</h2>
+        </div>
+        <div className="card-image-wrapper">
+          <div className="card-image" style={{ backgroundColor: isRealidad ? '#1a0a0a' : '#1e2a1a' }}>
+            <span className="card-emoji">{animal.emoji}</span>
+          </div>
+          <div className="card-domains">
+            {animal.domains.map(d => (
+              <span key={d} className="card-domain-tag">{d}</span>
+            ))}
+          </div>
+        </div>
+        <div className="card-data">
+          <div className="card-stat">
+            <span className="card-stat-icon">🌿</span>
+            <div>
+              <div className="card-stat-label">Vida en libertad</div>
+              <div className="card-stat-value">{animal.lifeExpectancy.value}</div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    )
+  }
+
   return (
     <motion.div
       className="card"
-      style={{ x, rotate, opacity }}
+      style={{ x, rotate, opacity, zIndex: 2 }}
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
+      onDrag={handleDrag}
       onDragEnd={handleDragEnd}
       whileTap={{ cursor: 'grabbing' }}
     >
-      {/* Nombre */}
       <div className="card-header">
         <h2 className="card-name">{animal.name}</h2>
+      </div>
+
+      <div className="card-image-wrapper">
+        <motion.div
+          className="card-image"
+          animate={{ backgroundColor: isRealidad ? '#1a0a0a' : '#1e2a1a' }}
+          transition={{ duration: 0.4 }}
+        >
+          <span className="card-emoji">{animal.emoji}</span>
+        </motion.div>
         <div className="card-domains">
           {animal.domains.map(d => (
             <span key={d} className="card-domain-tag">{d}</span>
@@ -41,13 +103,7 @@ export default function AnimalCard({ animal, onSwipeLeft, onSwipeRight }: Props)
         </div>
       </div>
 
-      {/* Imagen */}
-      <div className="card-image">
-        <span className="card-emoji">{animal.emoji}</span>
-      </div>
-
-      {/* Datos */}
-      <div className="card-data">
+      <div className={`card-data ${isRealidad ? 'card-data--realidad' : ''}`}>
         <div className="card-stat">
           <span className="card-stat-icon">🌿</span>
           <div>
