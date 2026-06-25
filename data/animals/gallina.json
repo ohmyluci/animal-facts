@@ -1,0 +1,107 @@
+{
+  "id": "gallina",
+  "name": "Gallina",
+  "scientificName": "Gallus gallus domesticus",
+  "domains": [
+    {
+      "domain": "alimentaria",
+      "uses": [
+        {
+          "use": "Producción de huevos en jaula en batería",
+          "facts": [
+            {
+              "statement": "La Directiva 1999/74/CE estableció un espacio mínimo de 550 cm² por gallina en jaulas en batería convencionales, y prohibió este tipo de jaulas en toda la UE a partir del 1 de enero de 2012. Las jaulas enriquecidas, aún permitidas, requieren un mínimo de 750 cm² por gallina.",
+              "value": "550 cm²/gallina (jaula convencional, prohibida desde 2012); 750 cm²/gallina (jaula enriquecida)",
+              "source": {
+                "name": "Directiva 1999/74/CE del Consejo, artículos 5 y 6",
+                "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:31999L0074",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "UE",
+              "verified": true
+            }
+          ]
+        },
+        {
+          "use": "Producción de carne (pollos de engorde)",
+          "facts": [
+            {
+              "statement": "La densidad máxima de cría de pollos de engorde en la UE es de 33 kg de peso vivo por metro cuadrado. Las explotaciones que cumplan condiciones adicionales de bienestar pueden llegar hasta 42 kg/m².",
+              "value": "33 kg/m² (estándar) — 42 kg/m² (con condiciones adicionales)",
+              "source": {
+                "name": "Directiva 2007/43/CE del Consejo, Anexo I",
+                "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32007L0043",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "UE",
+              "verified": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "vestimenta",
+      "uses": [
+        {
+          "use": "Obtención de plumas",
+          "facts": [
+            {
+              "statement": "Las plumas de gallina se utilizan como relleno en prendas de abrigo y ropa de cama, aunque la mayor parte del mercado de plumón procede de pato y ganso.",
+              "value": null,
+              "source": {
+                "name": "FAO — Poultry meat and products",
+                "url": "https://www.fao.org/poultry-production-products/en/",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "Global",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "experimentacion",
+      "uses": [
+        {
+          "use": "Producción de vacunas en huevos embrionados",
+          "facts": [
+            {
+              "statement": "Los huevos de gallina embrionados son el sustrato de cultivo más utilizado para la producción de vacunas contra la gripe estacional. Cada dosis de vacuna requiere aproximadamente un huevo.",
+              "value": "~1 huevo por dosis de vacuna antigripal",
+              "source": {
+                "name": "OMS — Influenza vaccines: questions and answers",
+                "url": "https://www.who.int/news-room/questions-and-answers/item/influenza-vaccines",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "Global",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "entretenimiento",
+      "uses": [
+        {
+          "use": "Peleas de gallos",
+          "facts": [
+            {
+              "statement": "La Ley 7/2023 de protección, derechos y bienestar de los animales prohíbe las peleas de gallos en todo el territorio español, eliminando las excepciones regionales que existían previamente.",
+              "value": null,
+              "source": {
+                "name": "Ley 7/2023, de 28 de marzo, de protección de los derechos y el bienestar de los animales, artículo 5",
+                "url": "https://www.boe.es/eli/es/l/2023/03/28/7",
+                "accessedDate": "2026-06-25"
+              },
+              "scope": "España",
+              "verified": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
