@@ -4,6 +4,7 @@ export interface Animal {
   namePlural: string
   gender: 'm' | 'f'
   emoji: string
+  image?: string
   domains: string[]
   annualKillsWorldwide: number
   lifeExpectancy: {

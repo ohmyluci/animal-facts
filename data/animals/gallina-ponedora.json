@@ -4,6 +4,7 @@
   "namePlural": "Gallinas ponedoras",
   "gender": "f",
   "emoji": "🥚",
+  "image": "/images/gallina-ponedora.jpg",
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 7000000000,
   "lifeExpectancy": {
