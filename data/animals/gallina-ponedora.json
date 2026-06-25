@@ -1,0 +1,53 @@
+{
+  "id": "gallina-ponedora",
+  "name": "Gallina ponedora",
+  "emoji": "🥚",
+  "domains": ["alimentaria"],
+  "lifeExpectancy": {
+    "value": "5-10 años",
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Gallus_gallus",
+      "accessedDate": "2026-06-25"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "72 semanas (~16 meses)",
+    "context": "Descartada cuando su producción de huevos cae por debajo del umbral rentable, normalmente al cabo de un ciclo de puesta.",
+    "source": {
+      "name": "EFSA Panel on Animal Health and Welfare - Scientific Opinion on the welfare of laying hens",
+      "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2005.197",
+      "accessedDate": "2026-06-25"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento eléctrico por baño de agua",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
+      "scope": "UE",
+      "description": "Las gallinas son colgadas vivas por las patas y su cabeza se sumerge en un baño de agua electrificado antes del degüello.",
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009 del Consejo",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+        "accessedDate": "2026-06-25"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Espacio mínimo legal por gallina en jaula enriquecida en la UE",
+      "value": "750 cm² por gallina",
+      "source": {
+        "name": "Directiva 1999/74/CE del Consejo",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A31999L0074",
+        "accessedDate": "2026-06-25"
+      },
+      "scope": "UE",
+      "verified": false
+    }
+  ],
+  "media": []
+}
