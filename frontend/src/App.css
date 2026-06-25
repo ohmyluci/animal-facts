@@ -90,6 +90,14 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   touch-action: none;
 }
 
+.card--back {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  transform-origin: center bottom;
+}
+
 .card-header {
   padding: 1.25rem 1.5rem 1rem;
   background: #111;

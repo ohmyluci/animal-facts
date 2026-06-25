@@ -12,17 +12,21 @@ export default function App() {
   const [index, setIndex] = useState(0)
   const [cardKey, setCardKey] = useState(0)
   const [mode, setMode] = useState<Mode>('libertad')
+  const [dragProgress, setDragProgress] = useState(0)
 
   const animal = animals[index]
+  const nextAnimal = animals[(index + 1) % animals.length]
 
   function next() {
     setIndex(i => (i + 1) % animals.length)
     setCardKey(k => k + 1)
+    setDragProgress(0)
   }
 
   function prev() {
     setIndex(i => (i - 1 + animals.length) % animals.length)
     setCardKey(k => k + 1)
+    setDragProgress(0)
   }
 
   return (
@@ -34,6 +38,15 @@ export default function App() {
       {started && (
         <div className="cards-view">
           <div className="card-stack">
+            <AnimalCard
+              key={`back-${cardKey}`}
+              animal={nextAnimal}
+              mode={mode}
+              isBack
+              dragProgress={Math.min(dragProgress / 80, 1)}
+              onSwipeLeft={next}
+              onSwipeRight={prev}
+            />
             <AnimatePresence mode="wait">
               <AnimalCard
                 key={cardKey}
@@ -41,6 +54,7 @@ export default function App() {
                 mode={mode}
                 onSwipeLeft={next}
                 onSwipeRight={prev}
+                onDragX={setDragProgress}
               />
             </AnimatePresence>
           </div>
