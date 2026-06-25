@@ -18,10 +18,11 @@ humano o propuesto por un agente:
    un campo `source` verificable (informe de ONG, legislación, estudio científico,
    organismo oficial). Si no hay fuente fiable disponible, el campo debe quedar
    marcado como `"verified": false` y no debe mergearse a `main` sin revisión humana.
-2. **Tono factual y documental, nunca gráfico ni sensacionalista.** Describe
-   condiciones, espacios, duraciones y métodos con precisión técnica. No describas
-   sufrimiento físico con detalle narrativo o sensorial. El dato factual ya es
-   contundente por sí mismo — no necesita dramatización.
+2. **Tono factual y documental.** Describe
+   condiciones, espacios, duraciones y métodos con precisión técnica. Puede describir
+   sufrimiento físico con detalle narrativo o sensorial. El dato factual es contundente
+   por sí mismo, pero narrar la realidad que viven los animales es necesario para 
+   generar la empatia necesaria.
 3. **Ningún contenido en `data/animals/` se considera publicable sin revisión humana
    explícita.** Un agente puede proponer contenido nuevo en una rama/PR, pero nunca
    debe mergear directamente a `main`.
