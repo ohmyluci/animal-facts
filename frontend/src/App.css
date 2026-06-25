@@ -63,7 +63,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1.25rem;
+  padding: 2rem 1.25rem;
   gap: 0.75rem;
 }
 
@@ -160,28 +160,21 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 
 .card-stat {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.card-stat-icon {
-  font-size: 1rem;
-  margin-top: 0.1rem;
-  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .card-stat-label {
-  font-size: 0.72rem;
-  color: #555;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  color: #666;
 }
 
 .card-stat-value {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #ddd;
-  margin-top: 0.1rem;
-  font-weight: 500;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 
@@ -196,12 +189,12 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .mode-btn {
-  padding: 0.5rem 1.25rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 999px;
   border: none;
   background: transparent;
   color: #555;
-  font-size: 0.85rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.25s, color 0.25s;
   white-space: nowrap;
@@ -212,13 +205,73 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   color: #f5f5f5;
 }
 
-/* Card image modes */
-.card-data--realidad .card-stat-value {
-  color: #e88;
+/* Slaughter counter */
+.slaughter-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.slaughter-counter-label {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.slaughter-counter-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c55;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Lifespan bar */
+.lifespan-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.lifespan-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: #555;
+  letter-spacing: 0.04em;
+}
+
+.lifespan-bar {
+  position: relative;
+  height: 6px;
+  background: #222;
+  border-radius: 999px;
+  overflow: visible;
+}
+
+.lifespan-bar-fill {
+  height: 100%;
+  background: #c0392b;
+  border-radius: 999px;
+}
+
+.lifespan-bar-skull {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.lifespan-bar-caption {
+  font-size: 0.65rem;
+  color: #555;
+  text-align: right;
 }
 
 /* Dots */
-.dots { display: flex; gap: 6px; }
+.dots { display: flex; gap: 6px; margin-bottom: 0.5rem; }
 .dot {
   width: 6px;
   height: 6px;

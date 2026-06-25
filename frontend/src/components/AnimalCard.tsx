@@ -1,6 +1,8 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import type { Animal } from '../types'
 import type { Mode } from '../App'
+import LifespanBar from './LifespanBar'
+import SlaughterCounter from './SlaughterCounter'
 
 interface Props {
   animal: Animal
@@ -103,30 +105,24 @@ export default function AnimalCard({
         </div>
       </div>
 
-      <div className={`card-data ${isRealidad ? 'card-data--realidad' : ''}`}>
+      <div className="card-data">
         <div className="card-stat">
-          <span className="card-stat-icon">🌿</span>
-          <div>
-            <div className="card-stat-label">Vida en libertad</div>
-            <div className="card-stat-value">{animal.lifeExpectancy.value}</div>
-          </div>
+          <span className="card-stat-label">Vida en libertad</span>
+          <span className="card-stat-value">{animal.lifeExpectancy.value}</span>
         </div>
         <div className="card-stat">
-          <span className="card-stat-icon">💀</span>
-          <div>
-            <div className="card-stat-label">Edad de sacrificio</div>
-            <div className="card-stat-value">{animal.ageAtKill.value}</div>
-          </div>
+          <span className="card-stat-label">Edad de muerte</span>
+          <span className="card-stat-value">{animal.ageAtKill.value}</span>
         </div>
-        {animal.facts[0] && (
-          <div className="card-stat">
-            <span className="card-stat-icon">📋</span>
-            <div>
-              <div className="card-stat-label">{animal.facts[0].statement}</div>
-              <div className="card-stat-value">{animal.facts[0].value}</div>
-            </div>
-          </div>
-        )}
+        <div className="card-stat">
+          <span className="card-stat-label">{animal.gender === 'f' ? 'Matadas' : 'Matados'} cada año en el mundo</span>
+          <span className="card-stat-value">~{(animal.annualKillsWorldwide / 1e6).toLocaleString('es-ES', { maximumFractionDigits: 0 })} M</span>
+        </div>
+        <LifespanBar
+          maxYears={animal.lifeExpectancy.maxYears}
+          killYears={animal.ageAtKill.years}
+        />
+        <SlaughterCounter annualKills={animal.annualKillsWorldwide} namePlural={animal.namePlural} gender={animal.gender} />
       </div>
     </motion.div>
   )

@@ -70,13 +70,13 @@ export default function App() {
               className={`mode-btn${mode === 'libertad' ? ' active' : ''}`}
               onClick={() => setMode('libertad')}
             >
-              🌿 Libertad
+              Libertad
             </button>
             <button
               className={`mode-btn${mode === 'realidad' ? ' active' : ''}`}
               onClick={() => setMode('realidad')}
             >
-              💀 Realidad
+              Realidad
             </button>
           </div>
         </div>
