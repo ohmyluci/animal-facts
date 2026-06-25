@@ -21,7 +21,7 @@ export default function SlaughterCounter({ annualKills }: Props) {
 
   return (
     <div className="slaughter-counter">
-      <div className="slaughter-counter-label">Muertes desde que abriste esta tarjeta</div>
+      <div className="slaughter-counter-label">Muertes desde que abriste la tarjeta</div>
       <div className="slaughter-counter-value">{count.toLocaleString('es-ES')}</div>
     </div>
   )

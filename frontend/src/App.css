@@ -150,12 +150,71 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   text-transform: capitalize;
 }
 
-.card-data {
-  padding: 1rem 1.5rem 1.25rem;
+.card-data-wrapper {
+  flex: 1;
+  min-height: 0;
+  position: relative;
   background: #111;
+}
+
+.card-data-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5rem;
+  background: linear-gradient(to bottom, transparent, #111);
+  pointer-events: none;
+}
+
+.card-data {
+  padding: 1rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  overflow-y: auto;
+  height: 100%;
+  scrollbar-width: none;
+  touch-action: pan-y;
+}
+
+.card-data::-webkit-scrollbar { display: none; }
+
+.card-data-divider {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 0.25rem 0;
+}
+
+.slaughter-section-title {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.slaughter-method {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.slaughter-method-name {
+  font-size: 0.85rem;
+  color: #e8e8e8;
+  font-weight: 600;
+}
+
+.slaughter-method-desc {
+  font-size: 0.78rem;
+  color: #aaa;
+  line-height: 1.55;
+}
+
+.slaughter-method-legal {
+  font-size: 0.7rem;
+  color: #666;
 }
 
 .card-stat {
@@ -166,13 +225,13 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .card-stat-label {
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 0.85rem;
+  color: #e8e8e8;
 }
 
 .card-stat-value {
-  font-size: 0.85rem;
-  color: #ddd;
+  font-size: 0.95rem;
+  color: #efefef;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -214,8 +273,8 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .slaughter-counter-label {
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 0.85rem;
+  color: #e8e8e8;
 }
 
 .slaughter-counter-value {
@@ -231,13 +290,17 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  background: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 0.65rem 0.9rem;
 }
 
 .lifespan-bar-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 0.65rem;
-  color: #555;
+  font-size: 0.8rem;
+  color: #e8e8e8;
   letter-spacing: 0.04em;
 }
 
@@ -265,8 +328,8 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .lifespan-bar-caption {
-  font-size: 0.65rem;
-  color: #555;
+  font-size: 0.8rem;
+  color: #e8e8e8;
   text-align: right;
 }
 

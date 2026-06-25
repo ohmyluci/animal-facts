@@ -105,24 +105,36 @@ export default function AnimalCard({
         </div>
       </div>
 
-      <div className="card-data">
-        <div className="card-stat">
-          <span className="card-stat-label">Vida en libertad</span>
-          <span className="card-stat-value">{animal.lifeExpectancy.value}</span>
+      <div className="card-data-wrapper">
+        <div className="card-data">
+          <div className="slaughter-section-title">Datos básicos</div>
+          <div className="card-stat">
+            <span className="card-stat-label">Vida en libertad</span>
+            <span className="card-stat-value">{animal.lifeExpectancy.value}</span>
+          </div>
+          <div className="card-stat">
+            <span className="card-stat-label">Edad de muerte</span>
+            <span className="card-stat-value">{animal.ageAtKill.value}</span>
+          </div>
+          <div className="card-stat">
+            <span className="card-stat-label">{animal.gender === 'f' ? 'Matadas' : 'Matados'} cada año en el mundo</span>
+            <span className="card-stat-value">~{(animal.annualKillsWorldwide / 1e6).toLocaleString('es-ES', { maximumFractionDigits: 0 })} M</span>
+          </div>
+          <LifespanBar
+            maxYears={animal.lifeExpectancy.maxYears}
+            killYears={animal.ageAtKill.years}
+          />
+          <SlaughterCounter annualKills={animal.annualKillsWorldwide} />
+          <hr className="card-data-divider" />
+          <div className="slaughter-section-title">Formas "humanas" de matar a este animal</div>
+          {animal.slaughterMethods.map((sm, i) => (
+            <div key={i} className="slaughter-method">
+              <div className="slaughter-method-name">{sm.method}</div>
+              {sm.description && <div className="slaughter-method-desc">{sm.description}</div>}
+              {sm.legalBasis && <div className="slaughter-method-legal">{sm.legalBasis}</div>}
+            </div>
+          ))}
         </div>
-        <div className="card-stat">
-          <span className="card-stat-label">Edad de muerte</span>
-          <span className="card-stat-value">{animal.ageAtKill.value}</span>
-        </div>
-        <div className="card-stat">
-          <span className="card-stat-label">{animal.gender === 'f' ? 'Matadas' : 'Matados'} cada año en el mundo</span>
-          <span className="card-stat-value">~{(animal.annualKillsWorldwide / 1e6).toLocaleString('es-ES', { maximumFractionDigits: 0 })} M</span>
-        </div>
-        <LifespanBar
-          maxYears={animal.lifeExpectancy.maxYears}
-          killYears={animal.ageAtKill.years}
-        />
-        <SlaughterCounter annualKills={animal.annualKillsWorldwide} />
       </div>
     </motion.div>
   )
