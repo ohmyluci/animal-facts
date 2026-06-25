@@ -1,10 +1,14 @@
 {
   "id": "cerdo-engorde",
   "name": "Cerdo de engorde",
+  "namePlural": "Cerdos",
+  "gender": "m",
   "emoji": "🐷",
   "domains": ["alimentaria"],
+  "annualKillsWorldwide": 1400000000,
   "lifeExpectancy": {
     "value": "10-15 años",
+    "maxYears": 15,
     "source": {
       "name": "AnAge: The Animal Ageing and Longevity Database",
       "url": "https://genomics.senescence.info/species/entry.php?species=Sus_scrofa",
@@ -14,6 +18,7 @@
   },
   "ageAtKill": {
     "value": "5-6 meses",
+    "years": 0.46,
     "context": "Sacrificado al alcanzar entre 100-120 kg de peso vivo.",
     "source": {
       "name": "Reglamento (CE) n.º 1099/2009",
@@ -37,6 +42,17 @@
     }
   ],
   "facts": [
+    {
+      "statement": "Sacrificados anualmente en el mundo",
+      "value": "~1.400 millones",
+      "source": {
+        "name": "FAO FAOSTAT – Livestock Primary: Pigs slaughtered (2021)",
+        "url": "https://www.fao.org/faostat/en/#data/QL",
+        "accessedDate": "2026-06-25"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
     {
       "statement": "Espacio mínimo legal por cerdo de más de 110 kg en la UE",
       "value": "1 m² por animal",

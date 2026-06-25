@@ -1,15 +1,20 @@
 export interface Animal {
   id: string
   name: string
+  namePlural: string
+  gender: 'm' | 'f'
   emoji: string
   domains: string[]
+  annualKillsWorldwide: number
   lifeExpectancy: {
     value: string
+    maxYears: number
     source: Source
     verified: boolean
   }
   ageAtKill: {
     value: string
+    years: number
     context: string
     source: Source
     verified: boolean

@@ -1,10 +1,14 @@
 {
   "id": "pollito-macho",
   "name": "Pollito macho recién nacido",
+  "namePlural": "Pollitos machos",
+  "gender": "m",
   "emoji": "🐣",
   "domains": ["alimentaria"],
+  "annualKillsWorldwide": 7000000000,
   "lifeExpectancy": {
     "value": "5-10 años",
+    "maxYears": 10,
     "source": {
       "name": "AnAge: The Animal Ageing and Longevity Database",
       "url": "https://genomics.senescence.info/species/entry.php?species=Gallus_gallus",
@@ -14,6 +18,7 @@
   },
   "ageAtKill": {
     "value": "Menos de 24 horas",
+    "years": 0.003,
     "context": "Los machos de razas ponedoras no producen huevos y no son aptos para engorde. Son eliminados el mismo día de la eclosión.",
     "source": {
       "name": "Reglamento (CE) n.º 1099/2009, Art. 1.3",
@@ -49,6 +54,17 @@
     }
   ],
   "facts": [
+    {
+      "statement": "Eliminados anualmente en el mundo",
+      "value": "~7.000 millones",
+      "source": {
+        "name": "Comisión Europea – Study on the killing of day-old male chicks in the EU (2019)",
+        "url": "https://op.europa.eu/en/publication-detail/-/publication/354a2a53-e1c4-11e9-9c4e-01aa75ed71a1",
+        "accessedDate": "2026-06-25"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
     {
       "statement": "Pollitos machos eliminados anualmente en la UE",
       "value": "~330 millones",

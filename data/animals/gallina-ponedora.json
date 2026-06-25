@@ -1,10 +1,14 @@
 {
   "id": "gallina-ponedora",
   "name": "Gallina ponedora",
+  "namePlural": "Gallinas ponedoras",
+  "gender": "f",
   "emoji": "🥚",
   "domains": ["alimentaria"],
+  "annualKillsWorldwide": 7000000000,
   "lifeExpectancy": {
     "value": "5-10 años",
+    "maxYears": 10,
     "source": {
       "name": "AnAge: The Animal Ageing and Longevity Database",
       "url": "https://genomics.senescence.info/species/entry.php?species=Gallus_gallus",
@@ -13,7 +17,8 @@
     "verified": false
   },
   "ageAtKill": {
-    "value": "72 semanas (~16 meses)",
+    "value": "~16 meses",
+    "years": 1.38,
     "context": "Descartada cuando su producción de huevos cae por debajo del umbral rentable, normalmente al cabo de un ciclo de puesta.",
     "source": {
       "name": "EFSA Panel on Animal Health and Welfare - Scientific Opinion on the welfare of laying hens",
@@ -37,6 +42,17 @@
     }
   ],
   "facts": [
+    {
+      "statement": "Sacrificadas anualmente en el mundo",
+      "value": "~7.000 millones",
+      "source": {
+        "name": "FAO FAOSTAT – Livestock Primary: Chickens slaughtered; estimate for end-of-lay hens (2021)",
+        "url": "https://www.fao.org/faostat/en/#data/QL",
+        "accessedDate": "2026-06-25"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
     {
       "statement": "Espacio mínimo legal por gallina en jaula enriquecida en la UE",
       "value": "750 cm² por gallina",
