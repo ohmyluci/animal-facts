@@ -1,0 +1,43 @@
+---
+import { readFileSync, readdirSync } from 'fs';
+import { join } from 'path';
+
+const dataDir = join(process.cwd(), '../data/animals');
+const files = readdirSync(dataDir).filter(f => f.endsWith('.json') && !f.startsWith('_'));
+const animals = files.map(f => JSON.parse(readFileSync(join(dataDir, f), 'utf-8')));
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Animal Facts</title>
+    <style>
+      body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+      h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+      .animal-card { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; }
+      .animal-card h2 { margin: 0 0 0.25rem; }
+      .scientific { color: #666; font-style: italic; font-size: 0.9rem; }
+      .life-expectancy { margin-top: 0.75rem; font-size: 0.9rem; }
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <h1>Animal Facts</h1>
+    <p>Enciclopedia de explotación animal con datos factuales y fuentes citadas.</p>
+
+    {animals.map(animal => (
+      <div class="animal-card">
+        <h2><a href={`/animal/${animal.id}`}>{animal.name}</a></h2>
+        <div class="scientific">{animal.scientificName}</div>
+        {animal.lifeExpectancy?.wild?.range && (
+          <div class="life-expectancy">
+            Esperanza de vida en libertad: <strong>{animal.lifeExpectancy.wild.range}</strong>
+          </div>
+        )}
+      </div>
+    ))}
+  </body>
+</html>
