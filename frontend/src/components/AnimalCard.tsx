@@ -37,20 +37,22 @@ export default function AnimalCard({ animal, mode, onSwipeLeft, onSwipeRight }: 
     >
       <div className="card-header">
         <h2 className="card-name">{animal.name}</h2>
+      </div>
+
+      <div className="card-image-wrapper">
+        <motion.div
+          className="card-image"
+          animate={{ backgroundColor: isRealidad ? '#1a0a0a' : '#1e2a1a' }}
+          transition={{ duration: 0.4 }}
+        >
+          <span className="card-emoji">{animal.emoji}</span>
+        </motion.div>
         <div className="card-domains">
           {animal.domains.map(d => (
             <span key={d} className="card-domain-tag">{d}</span>
           ))}
         </div>
       </div>
-
-      <motion.div
-        className={`card-image ${isRealidad ? 'card-image--realidad' : 'card-image--libertad'}`}
-        animate={{ backgroundColor: isRealidad ? '#1a0a0a' : '#1e2a1a' }}
-        transition={{ duration: 0.4 }}
-      >
-        <span className="card-emoji">{animal.emoji}</span>
-      </motion.div>
 
       <div className={`card-data ${isRealidad ? 'card-data--realidad' : ''}`}>
         <div className="card-stat">
