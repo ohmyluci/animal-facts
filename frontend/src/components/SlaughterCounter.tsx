@@ -2,11 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 
 interface Props {
   annualKills: number
-  namePlural: string
-  gender: 'm' | 'f'
 }
 
-export default function SlaughterCounter({ annualKills, namePlural, gender }: Props) {
+export default function SlaughterCounter({ annualKills }: Props) {
   const [count, setCount] = useState(0)
   const perSecond = annualKills / 31_557_600
   const startTime = useRef(Date.now())
