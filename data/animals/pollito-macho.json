@@ -4,6 +4,7 @@
   "namePlural": "Pollitos machos",
   "gender": "m",
   "emoji": "🐣",
+  "image": "/images/pollito-macho.jpg",
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 7000000000,
   "lifeExpectancy": {

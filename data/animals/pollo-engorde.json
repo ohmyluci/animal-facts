@@ -4,6 +4,7 @@
   "namePlural": "Pollos de engorde",
   "gender": "m",
   "emoji": "🐔",
+  "image": "/images/pollo-engorde.jpg",
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 70000000000,
   "lifeExpectancy": {

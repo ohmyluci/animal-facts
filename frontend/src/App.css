@@ -111,10 +111,13 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .card-image-wrapper {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   aspect-ratio: 4/3;
   flex-shrink: 0;
+  z-index: 1;
+  background: #161616;
 }
 
 .card-image {
@@ -129,6 +132,12 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 .card-emoji {
   font-size: 5rem;
   line-height: 1;
+}
+
+.card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-domains {
@@ -169,7 +178,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .card-data {
-  padding: 1rem 1.5rem 2rem;
+  padding: 0 0 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -177,6 +186,11 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   height: 100%;
   scrollbar-width: none;
   touch-action: pan-y;
+}
+
+.card-data > *:not(.card-image-wrapper) {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .card-data::-webkit-scrollbar { display: none; }

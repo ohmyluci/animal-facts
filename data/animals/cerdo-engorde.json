@@ -4,6 +4,7 @@
   "namePlural": "Cerdos",
   "gender": "m",
   "emoji": "🐷",
+  "image": "/images/cerdo-engorde.jpg",
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 1400000000,
   "lifeExpectancy": {

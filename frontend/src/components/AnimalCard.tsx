@@ -90,23 +90,25 @@ export default function AnimalCard({
         <h2 className="card-name">{animal.name}</h2>
       </div>
 
-      <div className="card-image-wrapper">
-        <motion.div
-          className="card-image"
-          animate={{ backgroundColor: isRealidad ? '#1a0a0a' : '#1e2a1a' }}
-          transition={{ duration: 0.4 }}
-        >
-          <span className="card-emoji">{animal.emoji}</span>
-        </motion.div>
-        <div className="card-domains">
-          {animal.domains.map(d => (
-            <span key={d} className="card-domain-tag">{d}</span>
-          ))}
-        </div>
-      </div>
-
       <div className="card-data-wrapper">
         <div className="card-data">
+          <div className="card-image-wrapper" onPointerDown={e => e.stopPropagation()}>
+            <motion.div
+              className="card-image"
+              animate={{ backgroundColor: isRealidad ? '#1a0a0a' : '#1e2a1a' }}
+              transition={{ duration: 0.4 }}
+            >
+              {animal.image
+                ? <img src={animal.image} alt={animal.name} className="card-photo" />
+                : <span className="card-emoji">{animal.emoji}</span>
+              }
+            </motion.div>
+            <div className="card-domains">
+              {animal.domains.map(d => (
+                <span key={d} className="card-domain-tag">{d}</span>
+              ))}
+            </div>
+          </div>
           <div className="slaughter-section-title">Datos básicos</div>
           <div className="card-stat">
             <span className="card-stat-label">Vida en libertad</span>
