@@ -125,7 +125,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 
 .card-domains {
   position: absolute;
-  bottom: 0.75rem;
+  top: 0.75rem;
   left: 0.75rem;
   display: flex;
   gap: 0.4rem;
