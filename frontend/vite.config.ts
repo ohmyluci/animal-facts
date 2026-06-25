@@ -4,6 +4,11 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    fs: {
+      allow: ['..'],
+    },
+  },
   resolve: {
     alias: {
       '@data': resolve(__dirname, '../data'),
