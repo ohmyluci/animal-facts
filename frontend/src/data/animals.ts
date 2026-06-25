@@ -1,9 +1,8 @@
 import type { Animal } from '../types'
+import gallina from '../../../data/animals/gallina.json'
 
-const modules = import.meta.glob('../../data/animals/*.json', { eager: true })
-
-const animals: Animal[] = Object.entries(modules)
-  .filter(([path]) => !path.includes('_schema'))
-  .map(([, mod]) => mod as Animal)
+const animals: Animal[] = [
+  gallina as Animal,
+]
 
 export default animals
