@@ -13,17 +13,13 @@ export default function App() {
   const animal = animals[index]
 
   function next() {
-    if (index < animals.length - 1) {
-      setIndex(i => i + 1)
-      setCardKey(k => k + 1)
-    }
+    setIndex(i => (i + 1) % animals.length)
+    setCardKey(k => k + 1)
   }
 
   function prev() {
-    if (index > 0) {
-      setIndex(i => i - 1)
-      setCardKey(k => k + 1)
-    }
+    setIndex(i => (i - 1 + animals.length) % animals.length)
+    setCardKey(k => k + 1)
   }
 
   return (
