@@ -1,13 +1,15 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import type { Animal } from '../types'
+import type { Mode } from '../App'
 
 interface Props {
   animal: Animal
+  mode: Mode
   onSwipeLeft: () => void
   onSwipeRight: () => void
 }
 
-export default function AnimalCard({ animal, onSwipeLeft, onSwipeRight }: Props) {
+export default function AnimalCard({ animal, mode, onSwipeLeft, onSwipeRight }: Props) {
   const x = useMotionValue(0)
   const rotate = useTransform(x, [-200, 200], [-12, 12])
   const opacity = useTransform(x, [-200, -100, 0, 100, 200], [0, 1, 1, 1, 0])
@@ -22,6 +24,8 @@ export default function AnimalCard({ animal, onSwipeLeft, onSwipeRight }: Props)
     }
   }
 
+  const isRealidad = mode === 'realidad'
+
   return (
     <motion.div
       className="card"
@@ -31,7 +35,6 @@ export default function AnimalCard({ animal, onSwipeLeft, onSwipeRight }: Props)
       onDragEnd={handleDragEnd}
       whileTap={{ cursor: 'grabbing' }}
     >
-      {/* Nombre */}
       <div className="card-header">
         <h2 className="card-name">{animal.name}</h2>
         <div className="card-domains">
@@ -41,13 +44,15 @@ export default function AnimalCard({ animal, onSwipeLeft, onSwipeRight }: Props)
         </div>
       </div>
 
-      {/* Imagen */}
-      <div className="card-image">
+      <motion.div
+        className={`card-image ${isRealidad ? 'card-image--realidad' : 'card-image--libertad'}`}
+        animate={{ backgroundColor: isRealidad ? '#1a0a0a' : '#1e2a1a' }}
+        transition={{ duration: 0.4 }}
+      >
         <span className="card-emoji">{animal.emoji}</span>
-      </div>
+      </motion.div>
 
-      {/* Datos */}
-      <div className="card-data">
+      <div className={`card-data ${isRealidad ? 'card-data--realidad' : ''}`}>
         <div className="card-stat">
           <span className="card-stat-icon">🌿</span>
           <div>

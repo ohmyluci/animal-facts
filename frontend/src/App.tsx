@@ -5,10 +5,13 @@ import AnimalCard from './components/AnimalCard'
 import animals from './data/animals'
 import './App.css'
 
+export type Mode = 'libertad' | 'realidad'
+
 export default function App() {
   const [started, setStarted] = useState(false)
   const [index, setIndex] = useState(0)
   const [cardKey, setCardKey] = useState(0)
+  const [mode, setMode] = useState<Mode>('libertad')
 
   const animal = animals[index]
 
@@ -35,10 +38,26 @@ export default function App() {
               <AnimalCard
                 key={cardKey}
                 animal={animal}
+                mode={mode}
                 onSwipeLeft={next}
                 onSwipeRight={prev}
               />
             </AnimatePresence>
+          </div>
+
+          <div className="mode-toggle">
+            <button
+              className={`mode-btn${mode === 'libertad' ? ' active' : ''}`}
+              onClick={() => setMode('libertad')}
+            >
+              🌿 Libertad
+            </button>
+            <button
+              className={`mode-btn${mode === 'realidad' ? ' active' : ''}`}
+              onClick={() => setMode('realidad')}
+            >
+              💀 Realidad
+            </button>
           </div>
 
           <div className="dots">
@@ -46,8 +65,6 @@ export default function App() {
               <span key={i} className={`dot${i === index ? ' active' : ''}`} />
             ))}
           </div>
-
-          <div className="nav-hint">← desliza para navegar →</div>
         </div>
       )}
     </div>
