@@ -35,7 +35,7 @@ export interface SlaughterMethod {
 
 export interface Fact {
   statement: string
-  value?: string
+  value?: string | null
   source?: Source
   verified?: boolean
 }
