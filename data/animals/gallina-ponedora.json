@@ -8,7 +8,7 @@
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 7000000000,
   "lifeExpectancy": {
-    "value": "5-10 años",
+    "value": "10 años",
     "maxYears": 10,
     "source": {
       "name": "AnAge: The Animal Ageing and Longevity Database",
@@ -18,8 +18,8 @@
     "verified": false
   },
   "ageAtKill": {
-    "value": "~16 meses",
-    "years": 1.38,
+    "value": "1 año",
+    "years": 1,
     "context": "Descartada cuando su producción de huevos cae por debajo del umbral rentable, normalmente al cabo de un ciclo de puesta.",
     "source": {
       "name": "EFSA Panel on Animal Health and Welfare - Scientific Opinion on the welfare of laying hens",

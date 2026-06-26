@@ -1,6 +1,6 @@
 {
   "id": "cerdo-engorde",
-  "name": "Cerdo de engorde",
+  "name": "Cerdo",
   "namePlural": "Cerdos",
   "gender": "m",
   "emoji": "🐷",
@@ -8,7 +8,7 @@
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 1400000000,
   "lifeExpectancy": {
-    "value": "10-15 años",
+    "value": "15 años",
     "maxYears": 15,
     "source": {
       "name": "AnAge: The Animal Ageing and Longevity Database",
@@ -18,7 +18,7 @@
     "verified": false
   },
   "ageAtKill": {
-    "value": "5-6 meses",
+    "value": "5 meses",
     "years": 0.46,
     "context": "Sacrificado al alcanzar entre 100-120 kg de peso vivo.",
     "source": {
