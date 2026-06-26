@@ -4,18 +4,25 @@ html, body, #root { height: 100%; overflow: hidden; background: #050505; font-fa
 /* App */
 .app-shell {
   height: 100dvh;
-  background: #050505;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .app {
   height: 100dvh;
   width: 100%;
-  max-width: 430px;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .app-shell {
+    background: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .app {
+    max-width: 430px;
+  }
 }
 
 /* Splash */
