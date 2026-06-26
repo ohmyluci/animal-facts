@@ -1,4 +1,5 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
+import type { MotionValue } from 'framer-motion'
 import type { Animal } from '../types'
 import LifespanBar from './LifespanBar'
 import SlaughterCounter from './SlaughterCounter'
@@ -7,24 +8,23 @@ interface Props {
   animal: Animal
   onSwipeLeft: () => void
   onSwipeRight: () => void
-  onDragX?: (x: number) => void
+  dragX?: MotionValue<number>
   isBack?: boolean
 }
 
 export default function AnimalCard({
-  animal, onSwipeLeft, onSwipeRight, onDragX, isBack,
+  animal, onSwipeLeft, onSwipeRight, dragX: externalDragX, isBack,
 }: Props) {
-  const x = useMotionValue(0)
+  const internalX = useMotionValue(0)
+  const x = externalDragX ?? internalX
   const rotate = useTransform(x, [-200, 200], [-12, 12])
   const opacity = useTransform(x, [-200, -100, 0, 100, 200], [0, 1, 1, 1, 0])
 
-
   function handleDrag() {
-    onDragX?.(Math.abs(x.get()))
+    // x ya es la MotionValue compartida con App — se actualiza sola
   }
 
   function handleDragEnd(_: unknown, info: { offset: { x: number } }) {
-    onDragX?.(0)
     if (info.offset.x < -80) {
       animate(x, -400, { duration: 0.3 }).then(onSwipeLeft)
     } else if (info.offset.x > 80) {
@@ -88,9 +88,7 @@ export default function AnimalCard({
 
   if (isBack) {
     return (
-      <motion.div
-        className="card card--back"
-      >
+      <motion.div className="card card--back">
         {cardContent}
       </motion.div>
     )
@@ -99,7 +97,7 @@ export default function AnimalCard({
   return (
     <motion.div
       className="card"
-      style={{ x, rotate, opacity, zIndex: 2 }}
+      style={{ x, rotate, opacity, zIndex: 3 }}
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       onDrag={handleDrag}
