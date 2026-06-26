@@ -139,12 +139,34 @@ html, body, #root { height: 100%; overflow: hidden; background: #050505; font-fa
   z-index: -1;
 }
 
+.card-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .card-name {
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
   text-shadow: 0 1px 8px rgba(0,0,0,0.7);
+}
+
+.card-share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .card-image-wrapper {
