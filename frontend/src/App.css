@@ -169,6 +169,10 @@ html, body, #root { height: 100%; overflow: hidden; background: #050505; font-fa
   cursor: pointer;
 }
 
+.card-share-btn svg {
+  margin-left: -2px;
+}
+
 .card-image-wrapper {
   width: 100%;
   aspect-ratio: 4/3;
