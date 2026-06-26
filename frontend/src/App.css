@@ -18,43 +18,52 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 
 .splash-content {
   max-width: 360px;
-  text-align: center;
+  width: 100%;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.75rem;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
-.splash-logo { font-size: 2.5rem; }
+.splash-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  min-height: 3.5rem;
+}
 
 .splash-title {
   font-size: 2.4rem;
   font-weight: 700;
   color: #f5f5f5;
   letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
 }
 
-
-.splash-message {
+.splash-line {
   font-size: 1.1rem;
-  line-height: 1.85;
+  line-height: 1.6;
   color: #bbb;
-  text-align: justify;
 }
 
-.splash-btn {
-  padding: 0.85rem 2.25rem;
-  background: transparent;
-  border: 1px solid #444;
-  border-radius: 999px;
-  color: #f5f5f5;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
+.splash-line--em {
+  color: #bbb;
 }
 
-.splash-btn:hover { border-color: #888; background: #111; }
+.splash-cursor {
+  display: inline-block;
+  width: 2px;
+  margin-left: 1px;
+  animation: blink 0.7s step-end infinite;
+  color: #888;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
 /* Cards view */
 .cards-view {
@@ -217,10 +226,11 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .slaughter-section-title {
-  font-size: 0.75rem;
-  color: #888;
+  font-size: 0.85rem;
+  color: #bbb;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  margin-top: 0.75rem;
 }
 
 .slaughter-method {
@@ -230,19 +240,20 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .slaughter-method-name {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #e8e8e8;
   font-weight: 600;
 }
 
 .slaughter-method-desc {
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   color: #aaa;
   line-height: 1.55;
+  text-align: justify;
 }
 
 .slaughter-method-legal {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #666;
 }
 
@@ -303,7 +314,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 .lifespan-bar-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #e8e8e8;
   letter-spacing: 0.04em;
 }
@@ -332,21 +343,24 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .lifespan-bar-caption {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #e8e8e8;
   text-align: right;
 }
 
 /* Dots */
-.dots { display: flex; gap: 6px; margin-bottom: 0.5rem; }
+.dots { display: flex; gap: 8px; margin-bottom: 0.75rem; }
 .dot {
-  width: 6px;
-  height: 6px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: #2a2a2a;
-  transition: background 0.2s;
+  background: rgba(255,255,255,0.2);
+  transition: background 0.2s, transform 0.2s;
 }
-.dot.active { background: #6b9e6b; }
+.dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
 
 /* Nav hint */
 .nav-hint { font-size: 0.72rem; color: #333; }
