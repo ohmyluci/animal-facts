@@ -1,6 +1,6 @@
 {
   "id": "pollito-macho",
-  "name": "Pollito macho recién nacido",
+  "name": "Pollito macho",
   "namePlural": "Pollitos machos",
   "gender": "m",
   "emoji": "🐣",
@@ -8,7 +8,7 @@
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 7000000000,
   "lifeExpectancy": {
-    "value": "5-10 años",
+    "value": "10 años",
     "maxYears": 10,
     "source": {
       "name": "AnAge: The Animal Ageing and Longevity Database",

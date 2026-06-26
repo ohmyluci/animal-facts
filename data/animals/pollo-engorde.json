@@ -8,7 +8,7 @@
   "domains": ["alimentaria"],
   "annualKillsWorldwide": 70000000000,
   "lifeExpectancy": {
-    "value": "5-10 años",
+    "value": "10 años",
     "maxYears": 10,
     "source": {
       "name": "AnAge: The Animal Ageing and Longevity Database",
@@ -18,7 +18,7 @@
     "verified": false
   },
   "ageAtKill": {
-    "value": "33-47 días",
+    "value": "40 días",
     "years": 0.11,
     "context": "Sacrificado al alcanzar el peso de mercado de ~2 kg. La selección genética ha reducido este tiempo drásticamente en las últimas décadas.",
     "source": {

@@ -5,14 +5,10 @@ import AnimalCard from './components/AnimalCard'
 import animals from './data/animals'
 import './App.css'
 
-export type Mode = 'libertad' | 'realidad'
-
 export default function App() {
   const [started, setStarted] = useState(false)
   const [index, setIndex] = useState(0)
   const [cardKey, setCardKey] = useState(0)
-  const [mode, setMode] = useState<Mode>('libertad')
-  const [dragProgress, setDragProgress] = useState(0)
 
   const animal = animals[index]
   const nextAnimal = animals[(index + 1) % animals.length]
@@ -20,13 +16,11 @@ export default function App() {
   function next() {
     setIndex(i => (i + 1) % animals.length)
     setCardKey(k => k + 1)
-    setDragProgress(0)
   }
 
   function prev() {
     setIndex(i => (i - 1 + animals.length) % animals.length)
     setCardKey(k => k + 1)
-    setDragProgress(0)
   }
 
   return (
@@ -41,9 +35,7 @@ export default function App() {
             <AnimalCard
               key={`back-${cardKey}`}
               animal={nextAnimal}
-              mode={mode}
               isBack
-              dragProgress={Math.min(dragProgress / 80, 1)}
               onSwipeLeft={next}
               onSwipeRight={prev}
             />
@@ -51,33 +43,18 @@ export default function App() {
               <AnimalCard
                 key={cardKey}
                 animal={animal}
-                mode={mode}
                 onSwipeLeft={next}
                 onSwipeRight={prev}
-                onDragX={setDragProgress}
               />
             </AnimatePresence>
           </div>
 
-          <div className="dots">
-            {animals.map((_, i) => (
-              <span key={i} className={`dot${i === index ? ' active' : ''}`} />
-            ))}
-          </div>
-
-          <div className="mode-toggle">
-            <button
-              className={`mode-btn${mode === 'libertad' ? ' active' : ''}`}
-              onClick={() => setMode('libertad')}
-            >
-              Libertad
-            </button>
-            <button
-              className={`mode-btn${mode === 'realidad' ? ' active' : ''}`}
-              onClick={() => setMode('realidad')}
-            >
-              Realidad
-            </button>
+          <div className="cards-overlay">
+            <div className="dots">
+              {animals.map((_, i) => (
+                <span key={i} className={`dot${i === index ? ' active' : ''}`} />
+              ))}
+            </div>
           </div>
         </div>
       )}
