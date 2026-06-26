@@ -10,27 +10,29 @@ export default function App() {
   const [index, setIndex] = useState(0)
   const [cardKey, setCardKey] = useState(0)
 
-  // MotionValue compartido: AnimalCard lo actualiza sin pasar por React state
+  // Solo para controlar la opacidad de las back cards — no controla posición del front
   const dragX = useMotionValue(0)
-
-  // z-index reactivo a dragX sin re-renders de React
-  const nextZ = useTransform(dragX, v => v <= 0 ? 2 : 1)
-  const prevZ = useTransform(dragX, v => v > 0 ? 2 : 1)
+  const nextOpacity = useTransform(dragX, [0, -120], [0, 1])
+  const prevOpacity = useTransform(dragX, [0, 120], [0, 1])
 
   const animal = animals[index]
   const nextAnimal = animals[(index + 1) % animals.length]
   const prevAnimal = animals[(index - 1 + animals.length) % animals.length]
 
+  function handleDrag(x: number) {
+    dragX.set(x)
+  }
+
   function next() {
+    dragX.set(-400) // mantiene la back card correcta visible mientras anima la salida
     setIndex(i => (i + 1) % animals.length)
     setCardKey(k => k + 1)
-    dragX.set(0)
   }
 
   function prev() {
+    dragX.set(400)
     setIndex(i => (i - 1 + animals.length) % animals.length)
     setCardKey(k => k + 1)
-    dragX.set(0)
   }
 
   return (
@@ -42,8 +44,7 @@ export default function App() {
       {started && (
         <div className="cards-view">
           <div className="card-stack">
-            {/* Back card anterior — visible al arrastrar a la derecha */}
-            <motion.div style={{ position: 'absolute', inset: 0, zIndex: prevZ }}>
+            <motion.div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: prevOpacity }}>
               <AnimalCard
                 key={`prev-${cardKey}`}
                 animal={prevAnimal}
@@ -52,8 +53,7 @@ export default function App() {
                 onSwipeRight={prev}
               />
             </motion.div>
-            {/* Back card siguiente — visible al arrastrar a la izquierda */}
-            <motion.div style={{ position: 'absolute', inset: 0, zIndex: nextZ }}>
+            <motion.div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: nextOpacity }}>
               <AnimalCard
                 key={`next-${cardKey}`}
                 animal={nextAnimal}
@@ -62,15 +62,13 @@ export default function App() {
                 onSwipeRight={prev}
               />
             </motion.div>
-            <AnimatePresence mode="wait">
-              <AnimalCard
-                key={cardKey}
-                animal={animal}
-                onSwipeLeft={next}
-                onSwipeRight={prev}
-                dragX={dragX}
-              />
-            </AnimatePresence>
+            <AnimalCard
+              key={cardKey}
+              animal={animal}
+              onSwipeLeft={next}
+              onSwipeRight={prev}
+              onDrag={handleDrag}
+            />
           </div>
 
           <div className="cards-overlay">
