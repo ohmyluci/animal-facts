@@ -2,9 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 
 interface Props {
   annualKills: number
+  gender?: 'f' | 'm'
 }
 
-export default function SlaughterCounter({ annualKills }: Props) {
+export default function SlaughterCounter({ annualKills, gender }: Props) {
   const [count, setCount] = useState(0)
   const perSecond = annualKills / 31_557_600
   const startTime = useRef(Date.now())
@@ -21,7 +22,7 @@ export default function SlaughterCounter({ annualKills }: Props) {
 
   return (
     <div className="slaughter-counter">
-      <div className="slaughter-counter-label">Muertes desde que abriste la tarjeta</div>
+      <div className="slaughter-counter-label">{gender === 'f' ? 'Sacrificadas' : 'Sacrificados'} en este instante</div>
       <div className="slaughter-counter-value">{count.toLocaleString('es-ES')}</div>
     </div>
   )

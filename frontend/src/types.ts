@@ -30,6 +30,7 @@ export interface SlaughterMethod {
   legalBasis?: string
   scope?: string
   description?: string
+  video?: { youtubeId: string; start?: number; end?: number }
   source?: Source
   verified?: boolean
 }

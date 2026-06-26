@@ -3,6 +3,7 @@ import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import type { Animal } from '../types'
 import LifespanBar from './LifespanBar'
 import SlaughterCounter from './SlaughterCounter'
+import YoutubeEmbed from './YoutubeEmbed'
 
 interface Props {
   animal: Animal
@@ -50,9 +51,6 @@ export default function AnimalCard({
 
   const cardContent = (
     <>
-      <div className="card-header">
-        <h2 className="card-name">{animal.name}</h2>
-      </div>
       <div className="card-data-wrapper">
         <div className="card-data">
           <div className="card-image-wrapper" onPointerDown={e => e.stopPropagation()}>
@@ -62,37 +60,37 @@ export default function AnimalCard({
                 : <span className="card-emoji">{animal.emoji}</span>
               }
             </div>
-            <div className="card-domains">
-              {animal.domains.map(d => (
-                <span key={d} className="card-domain-tag">{d}</span>
-              ))}
+            <div className="card-image-overlay">
+              <h2 className="card-name">{animal.name}</h2>
             </div>
           </div>
           <div className="slaughter-section-title">Datos básicos</div>
-          <div className="card-stat">
-            <span className="card-stat-label">Vida en libertad</span>
-            <span className="card-stat-value">{animal.lifeExpectancy.value}</span>
-          </div>
-          <div className="card-stat">
-            <span className="card-stat-label">Edad al sacrificio</span>
-            <span className="card-stat-value">{animal.ageAtKill.value}</span>
-          </div>
-          <div className="card-stat">
-            <span className="card-stat-label">{animal.gender === 'f' ? 'Sacrificadas' : 'Sacrificados'} cada año en el mundo</span>
-            <span className="card-stat-value">~{(animal.annualKillsWorldwide / 1e6).toLocaleString('es-ES', { maximumFractionDigits: 0 })} millones</span>
+          <div className="card-stats">
+            <div className="card-stat">
+              <span className="card-stat-label">Vida en libertad</span>
+              <span className="card-stat-value">{animal.lifeExpectancy.value}</span>
+            </div>
+            <div className="card-stat">
+              <span className="card-stat-label">Edad al sacrificio</span>
+              <span className="card-stat-value">{animal.ageAtKill.value}</span>
+            </div>
+            <div className="card-stat">
+              <span className="card-stat-label">{animal.gender === 'f' ? 'Sacrificadas' : 'Sacrificados'} cada año</span>
+              <span className="card-stat-value">~{(animal.annualKillsWorldwide / 1e6).toLocaleString('es-ES', { maximumFractionDigits: 0 })} millones</span>
+            </div>
+          <SlaughterCounter annualKills={animal.annualKillsWorldwide} gender={animal.gender} />
           </div>
           <LifespanBar
             maxYears={animal.lifeExpectancy.maxYears}
             killYears={animal.ageAtKill.years}
           />
-          <SlaughterCounter annualKills={animal.annualKillsWorldwide} />
-          <hr className="card-data-divider" />
           <div className="slaughter-section-title">Formas "humanas" de matar a este animal</div>
           {animal.slaughterMethods.map((sm, i) => (
             <div key={i} className="slaughter-method">
               <div className="slaughter-method-name">{sm.method}</div>
               {sm.description && <div className="slaughter-method-desc">{sm.description}</div>}
               {sm.legalBasis && <div className="slaughter-method-legal">{sm.legalBasis}</div>}
+              {sm.video && <YoutubeEmbed youtubeId={sm.video.youtubeId} start={sm.video.start} end={sm.video.end} />}
             </div>
           ))}
         </div>
