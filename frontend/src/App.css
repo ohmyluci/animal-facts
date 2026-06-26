@@ -129,12 +129,9 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .card-image-wrapper {
-  position: sticky;
-  top: 0;
   width: 100%;
   aspect-ratio: 4/3;
   flex-shrink: 0;
-  z-index: 1;
   background: #161616;
 }
 
