@@ -11,10 +11,12 @@ interface Props {
   onDrag?: (x: number) => void
   isBack?: boolean
   showHint?: boolean
+  hintDelay?: number
+  onHintShown?: () => void
 }
 
 export default function AnimalCard({
-  animal, onSwipeLeft, onSwipeRight, onDrag, isBack, showHint,
+  animal, onSwipeLeft, onSwipeRight, onDrag, isBack, showHint, hintDelay = 800, onHintShown,
 }: Props) {
   const x = useMotionValue(0)
   const rotate = useTransform(x, [-200, 200], [-12, 12])
@@ -22,11 +24,12 @@ export default function AnimalCard({
 
   useEffect(() => {
     if (!showHint) return
+    onHintShown?.()
     const timer = setTimeout(() => {
       animate(x, -55, { duration: 0.4, ease: 'easeOut' }).then(() =>
         animate(x, 0, { type: 'spring', stiffness: 200, damping: 18 })
       )
-    }, 800)
+    }, hintDelay)
     return () => clearTimeout(timer)
   }, [])
 
@@ -71,11 +74,11 @@ export default function AnimalCard({
             <span className="card-stat-value">{animal.lifeExpectancy.value}</span>
           </div>
           <div className="card-stat">
-            <span className="card-stat-label">Edad de muerte</span>
+            <span className="card-stat-label">Edad al sacrificio</span>
             <span className="card-stat-value">{animal.ageAtKill.value}</span>
           </div>
           <div className="card-stat">
-            <span className="card-stat-label">{animal.gender === 'f' ? 'Matadas' : 'Matados'} cada año en el mundo</span>
+            <span className="card-stat-label">{animal.gender === 'f' ? 'Sacrificadas' : 'Sacrificados'} cada año en el mundo</span>
             <span className="card-stat-value">~{(animal.annualKillsWorldwide / 1e6).toLocaleString('es-ES', { maximumFractionDigits: 0 })} millones</span>
           </div>
           <LifespanBar

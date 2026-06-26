@@ -10,6 +10,7 @@ export default function App() {
   const [index, setIndex] = useState(0)
   const [cardKey, setCardKey] = useState(0)
   const hintShown = useRef(false)
+  const showHintNow = started && !hintShown.current
 
   // Solo para controlar la opacidad de las back cards — no controla posición del front
   const dragX = useMotionValue(0)
@@ -69,7 +70,9 @@ export default function App() {
               onSwipeLeft={next}
               onSwipeRight={prev}
               onDrag={handleDrag}
-              showHint={!hintShown.current && (hintShown.current = true)}
+              showHint={showHintNow}
+              hintDelay={800}
+              onHintShown={() => { hintShown.current = true }}
             />
           </div>
 
