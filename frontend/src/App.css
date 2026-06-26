@@ -178,6 +178,9 @@ html, body, #root { height: 100%; overflow: hidden; background: #050505; font-fa
   margin-left: -2px;
 }
 
+.card-share-btn:focus { outline: none; }
+.card-share-btn:active { background: rgba(255,255,255,0.15); }
+
 .card-image-wrapper {
   width: 100%;
   aspect-ratio: 4/3;
