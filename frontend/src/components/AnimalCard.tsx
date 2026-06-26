@@ -1,5 +1,4 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
-import type { MotionValue } from 'framer-motion'
 import type { Animal } from '../types'
 import LifespanBar from './LifespanBar'
 import SlaughterCounter from './SlaughterCounter'
