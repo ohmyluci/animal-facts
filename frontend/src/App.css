@@ -13,9 +13,14 @@ html, body, #root { height: 100%; overflow: hidden; background: #050505; font-fa
 .app {
   height: 100dvh;
   width: 100%;
-  max-width: 430px;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .app {
+    max-width: 430px;
+  }
 }
 
 /* Splash */
