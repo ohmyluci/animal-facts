@@ -297,6 +297,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   border: 1px solid #2a2a2a;
   border-radius: 12px;
   padding: 0.65rem 0.9rem;
+  margin: 0 1rem;
 }
 
 .lifespan-bar-labels {

@@ -8,23 +8,25 @@ interface Props {
   animal: Animal
   onSwipeLeft: () => void
   onSwipeRight: () => void
-  dragX?: MotionValue<number>
+  // Solo para notificar a App la dirección del drag (back card opacity)
+  onDrag?: (x: number) => void
   isBack?: boolean
 }
 
 export default function AnimalCard({
-  animal, onSwipeLeft, onSwipeRight, dragX: externalDragX, isBack,
+  animal, onSwipeLeft, onSwipeRight, onDrag, isBack,
 }: Props) {
-  const internalX = useMotionValue(0)
-  const x = externalDragX ?? internalX
+  // El front card siempre gestiona su propia posición — arranca en 0
+  const x = useMotionValue(0)
   const rotate = useTransform(x, [-200, 200], [-12, 12])
   const opacity = useTransform(x, [-200, -100, 0, 100, 200], [0, 1, 1, 1, 0])
 
   function handleDrag() {
-    // x ya es la MotionValue compartida con App — se actualiza sola
+    onDrag?.(x.get())
   }
 
   function handleDragEnd(_: unknown, info: { offset: { x: number } }) {
+    onDrag?.(x.get())
     if (info.offset.x < -80) {
       animate(x, -400, { duration: 0.3 }).then(onSwipeLeft)
     } else if (info.offset.x > 80) {
