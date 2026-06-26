@@ -34,6 +34,7 @@
       "legalBasis": "Reglamento (CE) n.º 1099/2009, Art. 1.3",
       "scope": "UE",
       "description": "Los pollitos son introducidos vivos en una trituradora de rodillos o cuchillas de alta velocidad. El reglamento europeo lo permite expresamente para pollitos de un día.",
+      "video": { "youtubeId": "mCmRwrwhz64" },
       "source": {
         "name": "Reglamento (CE) n.º 1099/2009, Art. 1.3",
         "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
@@ -43,6 +44,7 @@
     },
     {
       "method": "Asfixia con CO₂",
+      "video": { "youtubeId": "H80Hz7x1I5M", "start": 47, "end": 122 },
       "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
       "scope": "UE",
       "description": "Los pollitos son introducidos en cámaras donde se eleva la concentración de CO₂. La EFSA ha documentado que el CO₂ causa una sensación aversiva antes de la pérdida de consciencia.",

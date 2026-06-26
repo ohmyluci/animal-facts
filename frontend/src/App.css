@@ -35,7 +35,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .splash-title {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #f5f5f5;
   letter-spacing: 0.05em;
@@ -43,7 +43,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .splash-line {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   color: #bbb;
 }
@@ -125,16 +125,12 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   z-index: -1;
 }
 
-.card-header {
-  padding: 1.25rem 1.5rem 1rem;
-  background: #111;
-}
-
 .card-name {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #f5f5f5;
+  color: #fff;
   line-height: 1.2;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.7);
 }
 
 .card-image-wrapper {
@@ -142,6 +138,17 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   aspect-ratio: 4/3;
   flex-shrink: 0;
   position: relative;
+}
+
+.card-image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem 1.5rem 1rem;
+  background: linear-gradient(to bottom, transparent 50%, #111 100%);
+  gap: 0.35rem;
 }
 
 .card-image {
@@ -165,22 +172,20 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .card-domains {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
   display: flex;
   gap: 0.4rem;
 }
 
 .card-domain-tag {
   font-size: 0.7rem;
-  padding: 0.2rem 0.6rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
   border-radius: 999px;
-  background: rgba(0,0,0,0.55);
+  background: rgba(180,60,60,0.75);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: #ccc;
+  color: #fff;
   text-transform: capitalize;
+  letter-spacing: 0.03em;
 }
 
 .card-data-wrapper {
@@ -205,11 +210,17 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   padding: 0 0 8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.1rem;
   overflow-y: auto;
   height: 100%;
   scrollbar-width: none;
   touch-action: pan-y;
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
 .card-data > *:not(.card-image-wrapper) {
@@ -226,7 +237,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .slaughter-section-title {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #bbb;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -236,24 +247,25 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 .slaughter-method {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .slaughter-method-name {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: #e8e8e8;
   font-weight: 600;
 }
 
 .slaughter-method-desc {
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   color: #aaa;
-  line-height: 1.55;
+  line-height: 1.6;
   text-align: justify;
 }
 
 .slaughter-method-legal {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #666;
 }
 
@@ -265,12 +277,12 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .card-stat-label {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #e8e8e8;
 }
 
 .card-stat-value {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: #efefef;
   font-weight: 600;
   white-space: nowrap;
@@ -287,14 +299,14 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
 }
 
 .slaughter-counter-label {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #e8e8e8;
 }
 
 .slaughter-counter-value {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #c55;
+  color: #a84444;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -304,11 +316,7 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  background: #1c1c1c;
-  border: 1px solid #2a2a2a;
-  border-radius: 12px;
-  padding: 0.65rem 0.9rem;
-  margin: 0 1rem;
+  padding: 0.25rem 0;
 }
 
 .lifespan-bar-labels {
@@ -346,6 +354,21 @@ html, body, #root { height: 100%; overflow: hidden; background: #0a0a0a; font-fa
   font-size: 0.9rem;
   color: #e8e8e8;
   text-align: right;
+}
+
+/* YouTube embed */
+.youtube-embed {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.youtube-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
 /* Dots */
