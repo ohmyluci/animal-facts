@@ -2,17 +2,21 @@ import { useState, useRef } from 'react'
 import { AnimatePresence, useMotionValue, useTransform, motion } from 'framer-motion'
 import Splash from './components/Splash'
 import AnimalCard from './components/AnimalCard'
+import BottomNav from './components/BottomNav'
+import AlimentosView from './components/AlimentosView'
 import animals from './data/animals'
 import './App.css'
 
+type Tab = 'animales' | 'alimentos'
+
 export default function App() {
   const [started, setStarted] = useState(false)
+  const [activeTab, setActiveTab] = useState<Tab>('animales')
   const [index, setIndex] = useState(0)
   const [cardKey, setCardKey] = useState(0)
   const hintShown = useRef(false)
   const showHintNow = started && !hintShown.current
 
-  // Solo para controlar la opacidad de las back cards — no controla posición del front
   const dragX = useMotionValue(0)
   const nextOpacity = useTransform(dragX, [0, -120], [0, 1])
   const prevOpacity = useTransform(dragX, [0, 120], [0, 1])
@@ -26,7 +30,7 @@ export default function App() {
   }
 
   function next() {
-    dragX.set(-400) // mantiene la back card correcta visible mientras anima la salida
+    dragX.set(-400)
     setIndex(i => (i + 1) % animals.length)
     setCardKey(k => k + 1)
   }
@@ -44,46 +48,50 @@ export default function App() {
       </AnimatePresence>
 
       {started && (
-        <div className="cards-view">
-          <div className="card-stack">
-            <motion.div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: prevOpacity }}>
-              <AnimalCard
-                key={`prev-${cardKey}`}
-                animal={prevAnimal}
-                isBack
-                onSwipeLeft={next}
-                onSwipeRight={prev}
-              />
-            </motion.div>
-            <motion.div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: nextOpacity }}>
-              <AnimalCard
-                key={`next-${cardKey}`}
-                animal={nextAnimal}
-                isBack
-                onSwipeLeft={next}
-                onSwipeRight={prev}
-              />
-            </motion.div>
-            <AnimalCard
-              key={cardKey}
-              animal={animal}
-              onSwipeLeft={next}
-              onSwipeRight={prev}
-              onDrag={handleDrag}
-              showHint={showHintNow}
-              hintDelay={800}
-              onHintShown={() => { hintShown.current = true }}
-            />
+        <>
+          <div className="app-content">
+            {activeTab === 'animales' && (
+              <div className="cards-view">
+                <div className="card-stack">
+                  <motion.div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: prevOpacity }}>
+                    <AnimalCard
+                      key={`prev-${cardKey}`}
+                      animal={prevAnimal}
+                      isBack
+                      onSwipeLeft={next}
+                      onSwipeRight={prev}
+                    />
+                  </motion.div>
+                  <motion.div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: nextOpacity }}>
+                    <AnimalCard
+                      key={`next-${cardKey}`}
+                      animal={nextAnimal}
+                      isBack
+                      onSwipeLeft={next}
+                      onSwipeRight={prev}
+                    />
+                  </motion.div>
+                  <AnimalCard
+                    key={cardKey}
+                    animal={animal}
+                    onSwipeLeft={next}
+                    onSwipeRight={prev}
+                    onDrag={handleDrag}
+                    showHint={showHintNow}
+                    hintDelay={800}
+                    onHintShown={() => { hintShown.current = true }}
+                  />
+                </div>
+
+                <div className="cards-overlay" />
+              </div>
+            )}
+
+            {activeTab === 'alimentos' && <AlimentosView />}
           </div>
 
-          <div className="cards-overlay">
-            <div className="dots">
-              {animals.map((_, i) => (
-                <span key={i} className={`dot${i === index ? ' active' : ''}`} />
-              ))}
-            </div>
-          </div>
-        </div>
+          <BottomNav active={activeTab} onChange={setActiveTab} />
+        </>
       )}
     </div>
   )
