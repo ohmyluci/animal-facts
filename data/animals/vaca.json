@@ -1,107 +1,126 @@
 {
-  "id": "vaca",
-  "name": "Vaca",
+  "id": "vaca-lechera",
+  "name": "Vaca lechera",
+  "namePlural": "Vacas lecheras",
   "scientificName": "Bos taurus",
-  "domains": [
-    {
-      "domain": "alimentaria",
-      "uses": [
-        {
-          "use": "Producción de leche",
-          "facts": [
-            {
-              "statement": "El bienestar de los bovinos en explotaciones ganaderas de la UE se rige por la Directiva 98/58/CE, que establece obligaciones generales de cuidado (alimentación, espacio, supervisión) para todos los animales de granja.",
-              "value": null,
-              "source": {
-                "name": "Directiva 98/58/CE del Consejo, relativa a la protección de los animales en las explotaciones ganaderas",
-                "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:31998L0058",
-                "accessedDate": "2026-06-25"
-              },
-              "scope": "UE",
-              "verified": true
-            }
-          ]
-        },
-        {
-          "use": "Producción de carne bovina",
-          "facts": [
-            {
-              "statement": "La UE produjo aproximadamente 6,6 millones de toneladas de carne bovina en 2022, siendo uno de los principales productores mundiales.",
-              "value": "~6,6 millones de toneladas (2022)",
-              "source": {
-                "name": "Eurostat — Livestock and meat statistics",
-                "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Livestock_and_meat_statistics",
-                "accessedDate": "2026-06-25"
-              },
-              "scope": "UE",
-              "verified": false
-            }
-          ]
-        }
-      ]
+  "gender": "f",
+  "emoji": "🐄",
+  "image": "/images/vaca-lechera.jpg",
+  "domains": ["alimentaria", "vestimenta"],
+  "annualKillsWorldwide": 300000000,
+  "lifeExpectancy": {
+    "value": "20 años",
+    "maxYears": 20,
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database — Bos taurus",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Bos_taurus",
+      "accessedDate": "2026-07-01"
     },
-    {
-      "domain": "vestimenta",
-      "uses": [
-        {
-          "use": "Obtención de cuero bovino",
-          "facts": [
-            {
-              "statement": "Las pieles bovinas son la principal fuente de cuero a nivel mundial. Se destinan a calzado, marroquinería, tapicería e indumentaria.",
-              "value": null,
-              "source": {
-                "name": "FAO — World statistical compendium for raw hides and skins, leather and leather footwear 1999–2020",
-                "url": "https://www.fao.org/3/cb7452en/cb7452en.pdf",
-                "accessedDate": "2026-06-25"
-              },
-              "scope": "Global",
-              "verified": false
-            }
-          ]
-        }
-      ]
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "4-6 años",
+    "years": 5,
+    "context": "Descartada cuando la producción de leche cae por debajo del umbral de rentabilidad, normalmente tras 3-5 ciclos de lactación. Para mantener la producción, la vaca es inseminada artificialmente una vez al año: cada ternero que nace activa un nuevo ciclo de lactación mientras la cría es separada para comercializar la leche.",
+    "source": {
+      "name": "care4dairy.eu — Vacas al fin de su carrera productiva",
+      "url": "https://care4dairy.eu/best-practice-guides/end-of-career-cows/",
+      "accessedDate": "2026-07-01"
     },
+    "verified": false
+  },
+  "slaughterMethods": [
     {
-      "domain": "experimentacion",
-      "uses": [
-        {
-          "use": "Suero bovino fetal (SBF) en investigación celular",
-          "facts": [
-            {
-              "statement": "El suero bovino fetal, extraído de fetos de vaca durante el sacrificio de la madre, es el suplemento de cultivo celular más utilizado en investigación biomédica a nivel mundial.",
-              "value": null,
-              "source": {
-                "name": "van der Valk et al. (2010) — Optimization of chemically defined cell culture media, Toxicology in Vitro 24(4):1053-63",
-                "url": "https://doi.org/10.1016/j.tiv.2010.03.016",
-                "accessedDate": "2026-06-25"
-              },
-              "scope": "Global",
-              "verified": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "domain": "entretenimiento",
-      "uses": [
-        {
-          "use": "Tauromaquia",
-          "facts": [
-            {
-              "statement": "La tauromaquia está reconocida en España como patrimonio cultural de especial protección por ley, lo que la exime de la prohibición general de espectáculos que impliquen maltrato animal.",
-              "value": null,
-              "source": {
-                "name": "Ley 18/2013, de 12 de noviembre, para la regulación de la Tauromaquia como patrimonio cultural",
-                "url": "https://www.boe.es/eli/es/l/2013/11/12/18",
-                "accessedDate": "2026-06-25"
-              },
-              "scope": "España",
-              "verified": true
-            }
-          ]
-        }
-      ]
+      "method": "Pistola de perno cautivo penetrante",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
+      "scope": "UE",
+      "description": "Un émbolo de acero es disparado a alta velocidad contra el cráneo del animal mediante aire comprimido o pólvora. El impacto causa traumatismo craneoencefálico e inconsciencia inmediata, seguida del sangrado por sección de las arterias carótidas o la vena yugular. Es el método de aturdimiento dominante para bovinos en mataderos europeos.",
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009 del Consejo, relativo a la protección de los animales en el momento de la matanza",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+        "accessedDate": "2026-07-01"
+      },
+      "verified": false
     }
-  ]
+  ],
+  "facts": [
+    {
+      "statement": "Sacrificados anualmente en el mundo (total bovinos, incluidos animales de leche y de carne)",
+      "value": "~300 millones de cabezas",
+      "source": {
+        "name": "FAO — Agricultural production statistics 2010–2024",
+        "url": "https://www.fao.org/statistics/highlights-archive/highlights-detail/agricultural-production-statistics-2010-2024/en",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
+    {
+      "statement": "Vacas lecheras en la UE (diciembre 2024)",
+      "value": "~19,2 millones de cabezas",
+      "source": {
+        "name": "Eurostat — Milk production reached 161.8 million tonnes in 2024",
+        "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251120-3",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    },
+    {
+      "statement": "Producción de leche de vaca en la UE en 2024",
+      "value": "161,8 millones de toneladas",
+      "source": {
+        "name": "Eurostat — Milk production reached 161.8 million tonnes in 2024",
+        "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251120-3",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    },
+    {
+      "statement": "Producción media de leche por vaca en la UE (2024)",
+      "value": "8.120 kg por año",
+      "source": {
+        "name": "Eurostat — Milk production reached 161.8 million tonnes in 2024",
+        "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251120-3",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    },
+    {
+      "statement": "Separación madre-ternero: en la industria láctea convencional la cría es retirada en las primeras 12-24 horas de vida para destinar la leche a la venta. La EFSA recomendó en 2023 un mínimo de 24 horas de contacto madre-cría, reconociendo el estrés que provoca la separación en ambos.",
+      "value": null,
+      "source": {
+        "name": "EFSA — Scientific Opinion on the welfare of calves (2023), EFSA Journal 21(3):7896",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2023.7896",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    },
+    {
+      "statement": "Los terneros machos de razas lecheras carecen de valor comercial para producción de carne en las mismas explotaciones. Son vendidos al sector del ternero de leche (veal) o sacrificados en los primeros días de vida.",
+      "value": null,
+      "source": {
+        "name": "EFSA — Scientific Opinion on the welfare of calves (2023), EFSA Journal 21(3):7896",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2023.7896",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    },
+    {
+      "statement": "La vaca lechera es inseminada artificialmente cada año para inducir un nuevo parto y reactivar la lactación. Sin preñez previa no hay producción de leche, por lo que el ciclo de gestación (9 meses) es inherente a la explotación lechera.",
+      "value": null,
+      "source": {
+        "name": "FAO — Gateway to dairy production and products",
+        "url": "https://www.fao.org/dairy-production-products/en/",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "Global",
+      "verified": false
+    }
+  ],
+  "media": []
 }
