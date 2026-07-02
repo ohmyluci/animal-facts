@@ -1,0 +1,81 @@
+{
+  "id": "ganso",
+  "name": "Ganso",
+  "namePlural": "Gansos",
+  "gender": "m",
+  "emoji": "🪿",
+  "image": "/images/ganso.jpg",
+  "domains": ["alimentaria"],
+  "annualKillsWorldwide": 760000000,
+  "lifeExpectancy": {
+    "value": "20 años",
+    "maxYears": 20,
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database — Anser anser",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Anser_anser",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "~4 meses",
+    "years": 0.33,
+    "context": "En la producción de foie gras, la crianza dura unos tres meses al aire libre hasta alcanzar ~3 kg, seguidos de un período final de estabulación y alimentación forzada (gavage) de 12 a 15 días antes del sacrificio.",
+    "source": {
+      "name": "El Español — El foie de bellota del extremeño Eduardo: así hipnotiza a sus gansos para sacrificarlos",
+      "url": "https://www.elespanol.com/reportajes/20200112/foie-bellota-extremeno-eduardo-hipnotiza-gansos-sacrificarlos/458954718_0.html",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento eléctrico previo al degüello",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009",
+      "scope": "UE",
+      "description": "La normativa europea exige aturdimiento eléctrico antes del sacrificio. En algunas explotaciones se emplea también el 'encandilamiento': deslumbrar a las aves con linternas LED de alta potencia para desorientarlas durante horas antes de la manipulación.",
+      "source": {
+        "name": "Quo — El foie de bellota del extremeño Eduardo",
+        "url": "https://quo.eldiario.es/salud/a25930/prohibido-el-foie-de-pato/amp",
+        "accessedDate": "2026-07-01"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Sacrificados anualmente en China, principal productor mundial (95-97% de la producción global)",
+      "value": "~736 millones (2024)",
+      "source": {
+        "name": "Helgi Library — Which Country Produces the Most Goose Meat?",
+        "url": "https://www.helgilibrary.com/charts/which-country-produces-the-most-goose-meat/",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "China",
+      "verified": false
+    },
+    {
+      "statement": "La alimentación forzada (gavage) para producir foie gras es ilegal en 22 estados miembros de la UE, pero sigue siendo legal en Francia, Hungría, Bulgaria y España.",
+      "value": null,
+      "source": {
+        "name": "AnimaNaturalis — Eurodiputados piden la prohibición de la cría en jaulas y la alimentación forzada de foie gras",
+        "url": "https://www.animanaturalis.org/n/45978/eurodiputados-piden-la-prohibicion-de-la-cria-en-jaulas-y-la-alimentacion-forzada-de-foie-gras",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    },
+    {
+      "statement": "La tasa de mortalidad durante las dos semanas de alimentación forzada",
+      "value": "aumenta entre 2 y 10 veces",
+      "source": {
+        "name": "The HSUS — The Welfare of Animals in the Foie Gras Industry",
+        "url": "https://www.humaneworld.org/sites/default/files/docs/hsus-report-welfare-foie-gras-industry.pdf",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    }
+  ],
+  "media": []
+}

@@ -1,0 +1,70 @@
+{
+  "id": "salmon",
+  "name": "Salmón",
+  "namePlural": "Salmones",
+  "gender": "m",
+  "emoji": "🐟",
+  "image": "/images/salmon.jpg",
+  "domains": ["alimentaria"],
+  "annualKillsWorldwide": 500000000,
+  "lifeExpectancy": {
+    "value": "13 años",
+    "maxYears": 13,
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database — Salmo salar",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Salmo_salar",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "2-3 años",
+    "years": 2.5,
+    "context": "Tras ~1 año en agua dulce, los salmones pasan 17-19 meses de engorde en jaulas marinas hasta alcanzar el peso de mercado. La mortalidad durante la fase marina, por piojos de mar, enfermedades y estrés de manejo, ronda el 15-16% anual en las principales productoras.",
+    "source": {
+      "name": "abc-salmonicultura.cl — ¿Cómo es el ciclo de cultivo de los salmones?",
+      "url": "https://abc-salmonicultura.cl/2021/01/31/como-es-el-ciclo-de-cultivo-de-los-salmones/",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento por percusión mecánica seguido de sangrado por corte de branquias",
+      "legalBasis": "Recomendaciones OIE / EFSA sobre bienestar de peces de acuicultura (sin reglamento UE vinculante equivalente al 1099/2009 para peces)",
+      "scope": "Global",
+      "description": "Un martillo neumático automatizado golpea la cabeza de cada salmón con fuerza suficiente para generar una onda de choque cerebral y aturdimiento instantáneo, seguido de un corte de branquias en los siguientes 10 segundos para el desangrado.",
+      "source": {
+        "name": "Humane Slaughter Association — Percussive Equipment",
+        "url": "https://www.hsa.org.uk/humane-harvesting-of-fish-percussive-stunning/percussive-equipment",
+        "accessedDate": "2026-07-01"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Salmones criados y sacrificados anualmente en el mundo",
+      "value": "~500 millones",
+      "source": {
+        "name": "Rethink Priorities — Mapping salmon welfare: a global overview",
+        "url": "https://rethinkpriorities.org/research-area/mapping-salmon-welfare-1/",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
+    {
+      "statement": "Salmones muertos en episodios de mortalidad masiva en la última década, por enfermedad, floraciones de algas nocivas y estrés térmico",
+      "value": "~865 millones",
+      "source": {
+        "name": "TIME — Why Massive Numbers of Farmed Salmon Are Dying",
+        "url": "https://time.com/6957610/farmed-salmon-dying/",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "Mundial",
+      "verified": false
+    }
+  ],
+  "media": []
+}
