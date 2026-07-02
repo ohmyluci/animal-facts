@@ -1,0 +1,81 @@
+{
+  "id": "conejo",
+  "name": "Conejo",
+  "namePlural": "Conejos",
+  "gender": "m",
+  "emoji": "🐇",
+  "image": "/images/conejo.jpg",
+  "domains": ["alimentaria"],
+  "annualKillsWorldwide": 482537000,
+  "lifeExpectancy": {
+    "value": "13 años",
+    "maxYears": 13,
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database — Oryctolagus cuniculus",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Oryctolagus_cuniculus",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "8 semanas",
+    "years": 0.15,
+    "context": "Sacrificado al alcanzar ~2 kg de peso vivo, entre la semana 6 y la 8 de vida.",
+    "source": {
+      "name": "Igualdad Animal — ¿A qué edad se mata a los animales para consumirlos?",
+      "url": "https://igualdadanimal.org/noticia/2017/03/15/que-edad-se-mata-los-animales-para-consumirlos/",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento eléctrico con tenazas cabeza-corazón",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
+      "scope": "UE",
+      "description": "La corriente se aplica primero con tenazas tipo tijera que prensan el cráneo durante al menos 3 segundos y después se transfiere a una posición que prensa el corazón durante otros 3 segundos, antes del desangrado.",
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009 del Consejo, Anexo I",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+        "accessedDate": "2026-07-01"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Sacrificados anualmente en el mundo",
+      "value": "~483 millones",
+      "source": {
+        "name": "FAOSTAT — Livestock Primary: Rabbits slaughtered (2022)",
+        "url": "https://www.fao.org/faostat/en/#data/QL",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
+    {
+      "statement": "No existe en la UE una directiva específica de bienestar para conejos de granja, a diferencia de pollos, cerdos o gallinas ponedoras.",
+      "value": null,
+      "source": {
+        "name": "Igualdad Animal — Granjas de conejos sin leyes específicas en la UE",
+        "url": "https://igualdadanimal.org/noticia/2017/03/09/la-carne-de-conejo-proviene-de-granjas-sin-leyes-especificas/",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    },
+    {
+      "statement": "Espacio mínimo legal por conejo en fase de engorde en España",
+      "value": "400 cm² por animal",
+      "source": {
+        "name": "Real Decreto 1547/2004, por el que se establecen normas de ordenación de las explotaciones cunícolas",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2004-12011",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "España",
+      "verified": false
+    }
+  ],
+  "media": []
+}

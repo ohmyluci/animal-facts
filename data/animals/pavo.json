@@ -1,0 +1,70 @@
+{
+  "id": "pavo",
+  "name": "Pavo",
+  "namePlural": "Pavos",
+  "gender": "m",
+  "emoji": "🦃",
+  "image": "/images/pavo.jpg",
+  "domains": ["alimentaria"],
+  "annualKillsWorldwide": 521969000,
+  "lifeExpectancy": {
+    "value": "10 años",
+    "maxYears": 10,
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database — Meleagris gallopavo",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Meleagris_gallopavo",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "12-16 semanas",
+    "years": 0.27,
+    "context": "Las hembras alcanzan el peso de mercado (~8,5 kg) hacia la semana 12 y los machos (~15 kg) hacia la semana 16. La selección genética para maximizar la masa muscular pectoral les impide reproducirse sin inseminación artificial.",
+    "source": {
+      "name": "aviNews — Necesidades nutricionales para pavos de engorde",
+      "url": "https://avinews.com/necesidades-nutricionales-para-pavos-de-engorde/",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Aturdimiento eléctrico por baño de agua",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
+      "scope": "UE",
+      "description": "Igual que en pollos y gallinas, los pavos son colgados vivos por las patas en grilletes y su cabeza se sumerge en un baño de agua electrificado entre 8 y 12 segundos antes del degüello. Un porcentaje de aves conserva signos de consciencia pese al aturdimiento.",
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009 del Consejo, Anexo I",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+        "accessedDate": "2026-07-01"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Sacrificados anualmente en el mundo",
+      "value": "~522 millones",
+      "source": {
+        "name": "FAOSTAT — Livestock Primary: Turkeys slaughtered (2023)",
+        "url": "https://www.fao.org/faostat/en/#data/QL",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
+    {
+      "statement": "Sacrificados anualmente en España",
+      "value": "~27 millones",
+      "source": {
+        "name": "AnimaNaturalis — La cruel verdad de las granjas de pavos españolas",
+        "url": "https://www.animanaturalis.org/n/46413/La-cruel-verdad-de-las-granjas-de-pavos-espanolas",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "España",
+      "verified": false
+    }
+  ],
+  "media": []
+}

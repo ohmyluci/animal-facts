@@ -1,0 +1,70 @@
+{
+  "id": "cordero",
+  "name": "Cordero",
+  "namePlural": "Corderos",
+  "gender": "m",
+  "emoji": "🐑",
+  "image": "/images/cordero.jpg",
+  "domains": ["alimentaria"],
+  "annualKillsWorldwide": 550000000,
+  "lifeExpectancy": {
+    "value": "12 años",
+    "maxYears": 12,
+    "source": {
+      "name": "AnAge: The Animal Ageing and Longevity Database — Ovis aries",
+      "url": "https://genomics.senescence.info/species/entry.php?species=Ovis_aries",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "ageAtKill": {
+    "value": "4-12 meses",
+    "years": 0.67,
+    "context": "Corresponde al 'cordero pascual', la categoría comercial más consumida en España. Existen categorías aún más tempranas: el cordero lechal se sacrifica a los 25-30 días de vida, alimentado exclusivamente de leche materna.",
+    "source": {
+      "name": "Cocineando.com — Las edades del cordero: diferencia entre cordero lechal, recental y pascual",
+      "url": "https://cocineando.com/2019/02/07/las-edades-del-cordero-diferencia-entre-cordero-lechal-recental-y-pascual/",
+      "accessedDate": "2026-07-01"
+    },
+    "verified": false
+  },
+  "slaughterMethods": [
+    {
+      "method": "Pistola de perno cautivo penetrante o aturdimiento eléctrico cabeza-tronco",
+      "legalBasis": "Reglamento (CE) n.º 1099/2009, Anexo I, Tabla 1",
+      "scope": "UE",
+      "description": "En ovino se autorizan tanto la pistola de perno cautivo penetrante, disparada perpendicularmente contra la parte frontal del cráneo, como el aturdimiento eléctrico de cabeza a tronco con una corriente mínima de 1 amperio. Ambos métodos deben ir seguidos de sangrado inmediato.",
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009 del Consejo, Anexo I",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32009R1099",
+        "accessedDate": "2026-07-01"
+      },
+      "verified": false
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Ovinos sacrificados anualmente en el mundo para producción de carne",
+      "value": "~550 millones (2016)",
+      "source": {
+        "name": "Faunalytics — Global Animal Slaughter Statistics & Charts",
+        "url": "https://faunalytics.org/global-animal-slaughter-statistics-and-charts/",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "Mundial",
+      "verified": false
+    },
+    {
+      "statement": "El Reglamento (CE) n.º 1099/2009 exige aturdimiento previo al sacrificio, salvo excepción para determinados sacrificios rituales prescritos por confesiones religiosas.",
+      "value": null,
+      "source": {
+        "name": "Reglamento (CE) n.º 1099/2009 del Consejo",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/ALL/?uri=celex%3A32009R1099",
+        "accessedDate": "2026-07-01"
+      },
+      "scope": "UE",
+      "verified": false
+    }
+  ],
+  "media": []
+}
